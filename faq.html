@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Niroga Vaccine Scheduler</title>
+
+   <!-- Linking Bootstrap -->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    <!-- j query  -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+     <!-- External  CSS -->
+   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="icons\icofont\icofont.min.css">
+   <!-- Favicon For Website -->
+   <link rel="icon" href="img/favicon.png">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
+   <style>
+   	<!-- css for faq   -->
+   	  .faq{
+  margin-bottom:1.5em;
+}
+.faq h3{
+  font-size:1.1rem;
+  cursor:pointer;
+}
+
+.faq .row p{
+  opacity:0;
+  transition:all 250ms ease-in 250ms;
+  margin-top:1.5em;
+}
+
+.faq .row>*{
+  position:relative;
+  padding:0.5em 1em;
+  border-radius:10px;
+  box-shadow: 0px 0px 12px -5px #333333;
+  margin-bottom:1.5em;
+  flex:0 0 100% !important;
+  z-index:999;
+}
+
+.faq h2{
+	position:relative;
+}
+.faq h2::after{
+  content:'';
+  position:absolute;
+  bottom:-5px;
+
+  width:40%;
+  left:30%;
+  height:2px;
+  background:blue;
+}
+i.far{
+	color:green;
+	margin-right:0.5em;
+}
+
+   </style>
+
+</head>
+<body>
+	<div class="navi-top">
+		<div class="navi-cont">
+			<div class="row align-items-center">
+				<div class="col-lg-6">
+					<ul class="navi-top-details list-inline-item pl-0 mb-0">
+						<li class="list-inline-item"><a href="mailto:support@niroga.lk"><i class="icofont-ui-email mr-2"></i>support@niroga.lk</a></li>
+						<li class="list-inline-item"><i class="icofont-building-alt mr-2"></i>No 231, De Saram Place, Colombo 10, Sri Lanka</li>
+					</ul>
+				</div>
+				<div class="col-lg-6">
+					<div class="text-lg-right nav-right-col mt-2 mt-lg-0">
+						
+						<i class="icofont-ui-dial-phone mr-2"></i>
+						<a href="tel:011-456-1234" >
+							<span >Give Us a Call: </span>
+							<span >011-456-1234</span>
+						</a>
+						
+						<li class="list-inline-item ml-5"><a href="https://www.facebook.com" target="_blank"><i class="icofont-facebook mr-2 text-light"></i></a></li>
+						<li class="list-inline-item"><a href="https://www.youtube.com" target="_blank"><i class="icofont-youtube-play mr-2 text-light"></i></a></li>
+						<li class="list-inline-item"><a href="https://www.twitter.com" target="_blank"><i class="icofont-twitter mr-2 text-light"></i></a></li>
+						<li class="list-inline-item"><a href="https://www.instagram.com" target="_blank"><i class="icofont-instagram mr-2 text-light"></i></a></li>
+
+					
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<nav class="navbar navbar-expand-md navbar-light  sticky-top">
+		<div class="container-fluid">
+		<a  class="navbar-brand" href="index.html"> <img src="img/logo.png"></a> 
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+		<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarResponsive">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item active">
+					<a class="nav-link" href="index.html">Home</a>
+				</li>
+		
+				<li class="nav-item">
+					<a class="nav-link" href="vaccines.html">Vaccines</a>
+				</li>
+	
+			    <li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href=".html" id="centerdrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Find Centers <i class="icofont-curved-down"></i></a>
+					<ul class="dropdown-menu" aria-labelledby="centerdrop">
+						<li><a class="dropdown-item" href=".html">All Centers</a></li>
+						<li><a class="dropdown-item" href=".html">By District</a></li>
+					</ul>
+			  	</li>
+	
+				  <li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href=".html" id="helpdrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Help <i class="icofont-curved-down"></i></a>
+					<ul class="dropdown-menu" aria-labelledby="helpdrop">
+						<li><a class="dropdown-item" href=".html">How To Book</a></li>
+						<li><a class="dropdown-item" href=".html">FAQ</a></li>
+					</ul>
+			  	</li>
+
+				<li class="nav-item">
+					<a class="nav-link" href="about.html">About</a>
+				</li>
+
+				<li class="nav-item">
+					<a class="nav-link" href="contact.html">Contact Us</a>
+				</li>
+				<li class="nav-item">
+					<button type="button" class="btn btn-outline-success" onclick="location.href='booking.php'" >Book Now</button>
+
+
+				</li>
+
+
+
+			</ul>
+
+
+
+
+		</div>
+		</div>
+
+
+		
+		</nav>
+		
+
+
+
+
+
+<!--// Image Slider-->
+
+
+
+
+
+
+
+
+
+
+</div>
+
+</div>
+
+<!--// Jumbotron-->
+
+
+
+
+<!-- faq section start  -->
+
+	   <section class="faq">
+         <div class="container">
+            <div class="col-md-12 bg-white">
+              <h2 class="text-center">Frequently Asked Questions</h2>
+              <p class="text-center"> Here are some Frequently asked questions that many people may find when using this application, Click each to view the answer</p>
+              <br>
+            </div>
+            <div class="row  justify-content-md-center">
+            	 <div class="col-md-12" id="one" >
+                <h3 class="q1"><i class="far fa-question-circle text-primary"></i>Is it possible to make the Appointment at Any Time of day?</h3>
+                <p class="answer1"><i class="far fa-check-circle"></i>No the active time is 6:00pm-00:00am</p>
+                    
+              </div>
+              <div class="col-md-12" id="2" >
+                <h3 class="q2"><i class="far fa-question-circle text-primary"></i>Can i use this to Make and Appointment for relatives  using my Account</h3>
+                <p class="answer2"><i class="far fa-check-circle"></i>Sure its possible to do that also for the small children aswell?</p>
+                    
+              </div>
+
+              <div class="col-md-12" id="3">
+                <h3 class="q3"><i class="far fa-question-circle text-primary"></i>What will i reciee after i make the appointment</h3>
+                <p class="answer3"><i class="far fa-check-circle"></i>You will recive an sms with a unique Authentication Number</p>
+                   
+              </div>
+
+              <div class="col-md-12" id="4">
+                <h3 class="q4"><i class="far fa-question-circle text-primary"></i>After Vaccination will be notified about 2nd dose dates</h3>
+                <p class="answer4"><i class="far fa-check-circle"></i>Yes the dates will be updated to your profile accordingly?</p>
+                 
+              </div>
+
+              <div class="col-md-12" id="5">
+                <h3 class="q5"> <i class="far fa-question-circle text-primary"></i>Is there a Possibility of Appointment cancelation?</h3>
+                <p class="answer5"><i class="far fa-check-circle"></i>yes if your have an issue you can cancel your appointment?</p>
+                
+              </div>
+
+
+
+              <div class="col-md-12" id="6">
+                <h3 class="q6"> <i class="far fa-question-circle text-primary"></i>Is my personal information secuere</h3>
+                <p class="answer6"><i class="far fa-check-circle"></i>yes its 100% secure no 3rd party or others can access it?</p>
+                
+              </div>
+
+               <div class="col-md-12" id="7">
+                <h3 class="q7"> <i class="far fa-question-circle text-primary"></i>Is other vaccines avaiable rather than Covid</h3>
+                <p class="answer7"><i class="far fa-check-circle"></i>Right now we given more priority to covid, in the future we hope to implement that</p>
+                
+              </div>
+
+               <div class="col-md-12" id="8">
+                <h3 class="q8"> <i class="far fa-question-circle text-primary"></i>How will a be notified if the vaccine stock is empty</h3>
+                <p class="answer8"><i class="far fa-check-circle"></i>The system checks the vaccine stock of the center when you select the center if its empty you will get a message and notified</p>
+                
+              </div>
+            </div>
+         </div>
+      </section>
+
+
+
+
+
+
+
+<!--
+<footer>
+<div class="footer-top">
+
+</div>
+
+
+<div class="footer-bottom">
+	<p>©2021 Codex Software</p>
+</div>
+
+<div class="navbar fixed-bottom"></div>
+
+
+</footer>
+
+-->
+
+
+
+
+<!-- footer Start -->
+<footer class="footer section fixed-bottom">
+	<div class="container">
+			<h2>...</h2>
+
+	</div>
+
+
+		<div class="footer-bottom">
+			<p>©2021 Developed By Codex Software Solutions</p>
+		</div>
+
+</footer>
+
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<script>
+    $(document).ready(function(){
+        $('.q1').on('click',function(){
+            $('.answer1').css('opacity','1');
+        });
+         $('.q2').on('click',function(){
+            $('.answer2').css('opacity','1');
+        });
+          $('.q3').on('click',function(){
+            $('.answer3').css('opacity','1');
+        });
+           $('.q4').on('click',function(){
+            $('.answer4').css('opacity','1');
+        });
+            $('.q5').on('click',function(){
+            $('.answer5').css('opacity','1');
+        });
+             $('.q6').on('click',function(){
+            $('.answer6').css('opacity','1');
+        });
+              $('.q7').on('click',function(){
+            $('.answer7').css('opacity','1');
+        });
+               $('.q8').on('click',function(){
+            $('.answer8').css('opacity','1');
+        });
+    });
+</script>
+</body>
+</html>
