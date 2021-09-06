@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Niroga Vaccine Scheduler</title>
+
+   <!-- Linking Bootstrap -->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    <!-- j query  -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+     <!-- External  CSS -->
+   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="icons\icofont\icofont.min.css">
+   <!-- Favicon For Website -->
+   <link rel="icon" href="img/favicon.png">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
+ <style>
+    .contact-us .row{
+      margin-top:2em;
+      align-items:center;
+
+    }
+    .contact-us span{
+      font-size:0.8rem;
+      color:red;
+    }
+    .contact-us .row >*{
+      margin-bottom:1em;
+    }
+    .contact-us h4{
+      font-size:1.3rem;
+    }
+    .contact-us h3{
+      margin-bottom:0.5em;
+    }
+    .contact-us input,  .contact-us textarea{
+      width:90%;
+      border-radius:0 !important;
+    }
+    .contact-us input:focus{
+       box-shadow:none;
+    }
+    .contact-us ul{
+      list-style:none;
+    }
+    .contact-us a{
+      text-decoration:none;
+    }
+    h3.links-text{
+      margin-bottom:0;
+    }
+    #contact-det{
+      padding:1em 1.2em;
+      background: -webkit-linear-gradient(360deg, #dee1e1 10%, #f4f4f4 360%);
+      background:linear-gradient(360deg, #dee1e1 10%, #f4f4f4 360%);
+    }
+    #submit-btn{
+      background: #3437A9;
+      border:0;
+      transition:all 250ms ease-in 250ms;
+    }
+    #submit-btn:hover{
+      opacity:0.9;
+    }
+ </style>
+
+</head>
+<body>
+	<div class="navi-top">
+		<div class="navi-cont">
+			<div class="row align-items-center">
+				<div class="col-lg-6">
+					<ul class="navi-top-details list-inline-item pl-0 mb-0">
+						<li class="list-inline-item"><a href="mailto:support@niroga.lk"><i class="icofont-ui-email mr-2"></i>support@niroga.lk</a></li>
+						<li class="list-inline-item"><i class="icofont-building-alt mr-2"></i>No 231, De Saram Place, Colombo 10, Sri Lanka</li>
+					</ul>
+				</div>
+				<div class="col-lg-6">
+					<div class="text-lg-right nav-right-col mt-2 mt-lg-0">
+						
+						<i class="icofont-ui-dial-phone mr-2"></i>
+						<a href="tel:011-456-1234" >
+							<span >Give Us a Call: </span>
+							<span >011-456-1234</span>
+						</a>
+						
+						<li class="list-inline-item ml-5"><a href="https://www.facebook.com" target="_blank"><i class="icofont-facebook mr-2 text-light"></i></a></li>
+						<li class="list-inline-item"><a href="https://www.youtube.com" target="_blank"><i class="icofont-youtube-play mr-2 text-light"></i></a></li>
+						<li class="list-inline-item"><a href="https://www.twitter.com" target="_blank"><i class="icofont-twitter mr-2 text-light"></i></a></li>
+						<li class="list-inline-item"><a href="https://www.instagram.com" target="_blank"><i class="icofont-instagram mr-2 text-light"></i></a></li>
+
+					
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<nav class="navbar navbar-expand-md navbar-light  sticky-top">
+		<div class="container-fluid">
+		<a  class="navbar-brand" href="index.html"> <img src="img/logo.png"></a> 
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+		<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarResponsive">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item active">
+					<a class="nav-link" href="index.html">Home</a>
+				</li>
+		
+				<li class="nav-item">
+					<a class="nav-link" href="vaccines.html">Vaccines</a>
+				</li>
+	
+			    <li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href=".html" id="centerdrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Find Centers <i class="icofont-curved-down"></i></a>
+					<ul class="dropdown-menu" aria-labelledby="centerdrop">
+						<li><a class="dropdown-item" href=".html">All Centers</a></li>
+						<li><a class="dropdown-item" href=".html">By District</a></li>
+					</ul>
+			  	</li>
+	
+				  <li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href=".html" id="helpdrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Help <i class="icofont-curved-down"></i></a>
+					<ul class="dropdown-menu" aria-labelledby="helpdrop">
+						<li><a class="dropdown-item" href=".html">How To Book</a></li>
+						<li><a class="dropdown-item" href=".html">FAQ</a></li>
+					</ul>
+			  	</li>
+
+				<li class="nav-item">
+					<a class="nav-link" href="about.html">About</a>
+				</li>
+
+				<li class="nav-item">
+					<a class="nav-link" href="contact.html">Contact Us</a>
+				</li>
+				<li class="nav-item">
+					<button type="button" class="btn btn-outline-success" onclick="location.href='booking.php'" >Book Now</button>
+
+
+				</li>
+
+
+
+			</ul>
+
+
+
+
+		</div>
+		</div>
+
+
+		
+		</nav>
+		
+
+
+
+
+
+<!--// Image Slider-->
+
+
+
+<!-- contatc use html here -->
+  <section class="contact-us">
+     <div class="container">
+        <h1 class="text-center">Contact Us</h1>
+        <div class="row">
+          <div class="col-md-6">
+             <h3>Send us Your Questions</h3>
+             <form action="#" id="contact-form">
+               <div class="form-group">
+                   <label for="name">Full Name</label>
+                  <input type="text" class="form-control" id="name">
+                  <span class="nameErr"></span>
+               </div>
+
+                   <div class="form-group">
+                   <label for="email">Email</label>
+                  <input type="email" class="form-control" id="email">
+                  <span class="emailErr"></span>
+               </div>
+
+                   <div class="form-group">
+                   <label for="contact">Contact Number</label>
+                  <input type="text" class="form-control" id="contact">
+                  <span class="contactErr"></span>
+                 </div>
+
+              <div class="form-group">
+                 <label for="msg">Question</label>
+                 <textarea name="msg" id="msg" cols="28" rows="4"  class="form-control" style="resize:none"></textarea>
+                 <span class="msgErr"></span>
+              </div>
+
+              <div class="form-group">
+                 <input type="submit" value="Send Question" class="btn btn-primary" id="submit-btn">
+              </div>
+
+             </form>
+             <div class="alert" role="alert" style="width:90%;">
+              <label></label>
+          </div>
+          </div>
+          <div class="col-md-6" id="contact-det">
+            <div class="main-text">
+               <h2>How can you reach us</h2>
+               <p> you can fill the form to ask your relavent questions, or give any feedback , we would be happy to accept both negative and positive feed back , below are our deatails</p>
+            </div>
+            <div>
+                <h4>Address</h4>
+                <p><span><i class="fas fa-map text-success"></i></span>
+                  No 231, De Saram Place, Colombo 10, Sri Lanka(main-branch)
+                </p>
+            </div>
+             <div>
+                <h4>Contact Number</h4>
+                <p><span><i class="fas fa-phone-square-alt text-primary"></i></span>
+                  011-456-1234
+                </p>
+            </div>
+              <div>
+                <h4>Email</h4>
+                <p><span><i class="fas fa-envelope-square text-danger"></i></span> support@niroga.lk</p>
+              </div>
+              <div>
+                 <h4 class="links-text">Useful links</h4>
+                 <ul>
+                   <li><a href="http://www.health.gov.lk/moh_final/english/">Ministry of Health</a></li>
+                   <li><a href="https://www.who.int/srilanka">WHO Srilanka</a></li>
+                   <li><a href="https://www.hpb.health.gov.lk/en">Health Promotiom Bearu</a></li>
+                 </ul>
+              </div>
+          </div>
+        </div>
+     </div>
+  </section>
+
+
+
+
+
+
+
+
+
+</div>
+
+</div>
+
+<!--// Jumbotron-->
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<footer>
+<div class="footer-top">
+
+</div>
+
+
+<div class="footer-bottom">
+	<p>©2021 Codex Software</p>
+</div>
+
+<div class="navbar fixed-bottom"></div>
+
+
+</footer>
+
+-->
+
+
+
+
+<!-- footer Start -->
+<footer class="footer section fixed-bottom">
+	<div class="container">
+			<h2>...</h2>
+
+	</div>
+
+
+		<div class="footer-bottom">
+			<p>©2021 Developed By Codex Software Solutions</p>
+		</div>
+
+</footer>
+
+
+
+<script>
+
+  
+   const  ContactForm= document.querySelector('#contact-form');
+   const  name=document.querySelector('#name');
+   const  email =document.querySelector('#email');
+   const  question = document.querySelector('#msg');
+   const  num =document.querySelector('#contact')
+
+   // erro spans
+   const  namErr=document.querySelector('.nameErr')
+   const mailErr=document.querySelector('.emailErr')
+   const msgErr=document.querySelector('.msgErr')
+
+   const alert = document.querySelector('.alert')
+   const alertP = document.querySelector('.alert label')
+
+   ContactForm.addEventListener('submit', onSubmit);
+   function onSubmit(e){
+       e.preventDefault();
+       if(name.value==='') {namErr.innerHTML='*Field Required';}
+       else  namErr.innerHTML='';
+
+        if(email.value==='') {mailErr.innerHTML='*Field Required';}
+          else  mailErr.innerHTML='';
+
+        if(question.value==='') {msgErr.innerHTML='*Field Required';}
+          else  msgErr.innerHTML='';
+
+        if((name.value!=='')&&(question.value!=='')&&(email.value!=='')){
+                 alert.classList.add('alert-success');
+                 alertP.innerHTML='Thanks your Quesion is Submitted';
+                 namErr.innerHTML=mailErr.innerHTML=msgErr.innerHTML='';
+                 name.value=email.value=num.value=question.value='';
+        }
+
+
+   }
+
+</script>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
