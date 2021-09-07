@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    
+    <!--locl css links-->
+    
+    <link rel="stylesheet" type="text/css" href="Sign%20In_P_files/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="Sign%20In_P_files/Style.css">
+        <!--bootstrap css-->
+    <link rel="stylesheet" href="Sign%20In_P_files/bootstrap_003.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link href="Sign%20In_P_files/bootstrap_002.css" rel="stylesheet">
+
+    <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Sulphur+Point:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sulphur+Point:wght@300;400;700&family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sulphur+Point:wght@300;400;700&family=Varela+Round&display=swap');
+
+*,*::before,*::after{
+  box-sizing:border-box;
+}
+  
+#login_button{
+  background-color:#0067D9;
+  border-color:#0067D9;
+  color: white;
+  
+}
+.Signup_link{
+      display: flex;
+      font-family: Varela Round; 
+      font-size: 15px;
+      padding-top: 10px;
+    }
+
+.form-select{
+  min-height: 3em;
+}
+body{
+  margin:0;
+}
+
+    .mb-3 {
+   
+    max-width: 20.5em !important;
+    }
+    #login_button{
+        max-width: 60.5em;
+    }
+    .content-text{
+        max-width: 90em;
+        
+    }
+    .form-floating{
+        max-width: 25em !important;
+        
+    }
+    .row{
+  margin:4em 0!important;
+  margin: 6% 0% 0% 12% !important;
+}
+.btn{
+  width:100%;
+  border-radius:0;
+}
+.d-flex{
+  gap:20px;
+ 
+}
+#coloumn{
+  display:flex;
+  flex-direction: column;
+  justify-content:space-around;
+}
+.form-control{
+   padding:0.75em 1em;
+}
+.confirmpassword-error{
+  color:red;
+  font-size: 14px;
+}
+.Sucess{
+  color: #0067D9;
+  font-size:1.5rem;
+}
+#login_button{
+        max-width: 100%;
+    }
+/* ---------------------------------------------------------------------------------------- */
+@media screen and (max-width:1200px){
+  .row{
+    margin: 10% 0% 0% 15% !important;
+    
+  }
+  #login_button{
+        max-width: 70%;
+    }
+  .img-fluid{
+    
+    display: none;
+  }
+  .col-md-6{
+   position: absolute;
+   width: 70% !important;
+}
+.col-md-5{
+  position: absolute;
+   width: 70% !important;
+}
+}
+@media screen and (max-width:1024px){
+  
+  .row{
+    margin: 10% 0% 0% 15% !important;
+    
+  }
+ .col-md-6{
+   
+    position: absolute;
+   width: 65% !important;
+}
+#login_button{
+  
+  max-width: 90%;
+}
+}
+@media screen and (max-width:768px){
+  .row{
+    margin: 10% 0% 0% 0% !important;
+    
+  }
+  #login_button{
+        max-width: 100%;
+  }
+  #col-2{
+    
+    opacity: 0;
+  }
+  
+  .img-fluid{
+    
+    display: none;
+  }
+  .col-md-6{
+   position: absolute;
+   width: 91% !important;
+}
+}
+
+@media screen and (max-width:480px){
+  .row{
+    margin: 15% 0% 0% 2% !important;
+    
+  }
+  #login_button{
+        max-width: 20.5em;
+    }
+  #col-2{
+    
+    opacity: 0;
+  }
+  .img-fluid{
+    
+    display: none;
+  }
+  .col-md-6{
+   position: absolute;
+   width: 91% !important;
+}
+.col-md-5{
+  position: absolute;
+   width: 91% !important;
+}
+}   
+ </style>
+    
+
+  <title>Sign Up H_M</title>
+  </head>
+  <body>
+    <!-- -->
+      <div class="container">
+        <div class="row">
+          <div class="col-md-5" id="coloumn">
+            <form action="#" id="form">
+              <div class="content-text">
+                  <h2>Sign Up</h2>
+                  <p>Make your Account to shedule your vaccine appointemnt</p>
+                  </div>
+              <div class="d-flex"> <!--user name and full name flex-->
+                 <!--User name-->
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="UserName" placeholder="User Name" required>
+                  <label for="UserName">Username</label>
+                  <div class="username-err">
+                  </div>
+              </div>
+                <!--Full Name-->
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="FullName" placeholder="Full Name" required>
+                    <label for="FullName">FullName</label>
+                    <div class="fullname-err">
+                    </div>
+                </div>
+            </div>
+              <!---->
+              <!--Email-->
+              <div class="form-floating" style="max-width: 20em !important;">
+                <input type="email" class="form-control" id="email" placeholder="test@example.com" >
+                <label for="email">Email</label>
+                <div class="email-err">
+
+                </div>
+              </div>
+              <!--User type selector-->
+                <div class="checkbox mb-3" style="max-width: 10em !important; margin-top: 6px;">  
+                    <select class="form-select" id="validationCustom04" required>
+                        <option selected disabled value="">User Type</option>
+                        <option value="1">Health Admin</option>
+                        <option value="2">Health Assistant</option>
+                    </select>
+                    <div class="invalid-feedback"> <!--user type validation-->
+                      Please select a User Type.
+                    </div>
+                  </div>
+                <div class="checkbox mb-3">
+                    <div class="form-floating">
+                      <input type="password" class="form-control" id="Password" placeholder="Password"  required>
+                      <label for="Password">Password</label>
+                      <div class="H_M_password-err">
+                      </div>
+                    </div>
+                    <div class="form-floating">
+                      <input type="password" class="form-control" id="cpass" placeholder="Confirm Password" required>
+                      <label for="Password">Confirm Password</label>
+                      <div class="H_M_confirmpassword-error">
+                      </div>
+                    </div>
+                </div>
+            <div class="login_button">
+              <button class="w-100 btn btn-lg " id="login_button" type="submit">Sign Up</button>
+            </div>
+            <div class="Signup_link"><!--Login link-->
+              <div>
+                <p>Already have an account? </p>
+                </div>
+                <div class="Sign_up_link">
+                <a href="#"> Log In</a>
+              </div>
+          </div>
+            <label class="Sucess"></label>
+          </form>
+          </div>
+            <div class="col-md-6" >
+                <img class="img-fluid" style="max-height: 35em;" src="img/favpng_graphic-design.png">
+            </div>
+        </div>
+      </div>
+      <script src="jquery-3.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script src="script.js"></script>
+  </body>
+</html>
