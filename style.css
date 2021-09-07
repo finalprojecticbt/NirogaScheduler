@@ -291,3 +291,21 @@ footer.footer-wrap > * {
     background-color: #101022;
     color: #fff;
   }
+
+
+
+
+  hr.devider1 { 
+    height: 1px; 
+    border: 0; 
+    background-image: -moz-linear-gradient(left, #ddd8d8, #7a7676, #ddd8d8);
+    background-image: -webkit-linear-gradient(left, #ddd8d8, #7a7676, #ddd8d8);
+    background-image: -o-linear-gradient(left, #ddd8d8, #7a7676, #ddd8d8); 
+    background-image: -ms-linear-gradient(left, #ddd8d8, #7a7676, #ddd8d8);
+
+  }
+
+  .card-img-top:hover {
+    opacity: 0.85;
+  
+  }
