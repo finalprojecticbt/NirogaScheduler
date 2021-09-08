@@ -309,3 +309,15 @@ footer.footer-wrap > * {
     opacity: 0.85;
   
   }
+
+  .align-txtcenter{
+
+    text-align: center;
+  }
+
+  #footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;            /* Footer height */
+  }
