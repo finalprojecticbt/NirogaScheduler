@@ -1,3 +1,21 @@
+<?php
+// Start the session
+session_start();
+
+/*
+
+if ($_SESSION["loggedStat"] == false) {
+  header('location: login.php');
+  die;
+
+*/
+}
+
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,11 +33,12 @@
    <!-- Carousel CSS File -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
    <!--Slider-Slick -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
    <!-- Favicon For Website -->
    <link rel="icon" href="img/favicon.png">
-
 </head>
 <body class="d-flex flex-column min-vh-100">
    <!-- Top-Bar -->
@@ -61,7 +80,7 @@
 		<div class="collapse navbar-collapse" id="responsiveNav">
 			   <!-- Nav Bar Items -->
 			<ul class="navbar-nav ml-auto">
-				<li class="nav-item active">
+				<li class="nav-item">
 					<a class="nav-link" href="index.html">Home</a>
 				</li>
 		
@@ -101,51 +120,59 @@
       </nav>
 		
    <!-- End-Navigation Bar -->
- <div class="container d-flex justify-content-center mt-5 mb-3">
- <select id="groups" >
-    <option value='America'>America</option>
-    <option value='Europe'>Europe</option>
-    <option value='Asia'>Asia</option>
-<select>
 
-<select id="sub_groups">
-    <option data-group='SHOW' value='0'>-- Select --</option>
-    <option data-group='America' value='Argentina'>Argentina</option>
-    <option data-group='America' value='Brazil'>Brazil</option>
-    <option data-group='America' value='Chile'>Chile</option>
-    <option data-group='Europe' value='Italy'>Italy</option>
-    <option data-group='Europe' value='France'>France</option>
-    <option data-group='Europe' value='Spain'>Spain</option>
-    <option data-group='Asia' value='China'>China</option>
-    <option data-group='Asia' value='Japan'>Japan</option>
-<select>
- 
- </div>
 
-<script>
+   <!-- Navigation Bar -->
+   
+   <nav class="navbar navbar-expand-md bg-primary">
+		<div class="container">
+			   <!-- Nav Bar Items -->
+			<ul class="navbar-nav ml-auto">
 
-$(function(){
-    $('#groups').on('change', function(){
-        var val = $(this).val();
-        var sub = $('#sub_groups');
-        $('option', sub).filter(function(){
-            if (
-                 $(this).attr('data-group') === val 
-              || $(this).attr('data-group') === 'SHOW'
-            ) {
-              if ($(this).parent('span').length) {
-                $(this).unwrap();
-              }
-            } else {
-              if (!$(this).parent('span').length) {
-                $(this).wrap( "<span>" ).parent().hide();
-              }
-            }
-        });
-    });
-    $('#groups').trigger('change');
-});
-</script>
+				<li class="nav-item2">
+					<a class="nav-link" href="add-vaccine.php">Add Vaccine</a>
+				</li>
+				
+				<li class="nav-item2">
+					<a class="nav-link" href="add-stock.php">Add Stock</a>
+				</li>
+
+				<li class="nav-item2">
+					<a class="nav-link" href="add-center.php">Add Center</a>
+				</li>
+				
+				<li class="nav-item2">
+					<a class="nav-link" href="add-assistant.php">Add Assistant</a>
+				</li>
+				<li class="nav-item2">
+				<button type="button" class = "logoutBtn btn-outline-info"  onclick="location.href='logout.php';">Logout</button>
+
+			</li>
+			</ul>
+		  </div>
+		</div>
+      </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 	<div class="container d-flex justify-content-center mt-5 mb-3 ">
+ 		<a  class="navbar-brand" href="index.html"> <img src="img/logo.png"></a> 
+ 	</div>
+
+
+ 	<div class="container d-flex justify-content-center">
+ 		<h4>Administrator Panel</h4>
+ 	</div>
 
 
 
@@ -229,6 +256,7 @@ $(function(){
 
 <!-- Linking Bootrap and JS Sources -->
 
+    <script  src="https://code.jquery.com/jquery-3.6.0.js"  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="  crossorigin="anonymous"></script>
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
