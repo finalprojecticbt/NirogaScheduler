@@ -1,0 +1,47 @@
+:root{
+    --background:#0067D9;
+    --darkblue:#101022;
+    --navyblue:#121256;
+  }
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+.col-md-6{
+   padding: 0em!important;
+}
+
+.Sign_in_png{
+  width: 90%;
+  height: 90%;
+}
+.form-signin{
+    padding-left: 10px;
+    width: 70%;
+    height: 50%;
+}
+.form-floating{
+    padding-top: 6px;
+}
+.Sign_up_link{
+    color: #0067D9;
+}
+
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+
+  }
+}
+@media(min-width: 720){
+
+    .row{
+        padding-top: 0em;
+        padding-left: 0em;
+    }
+    
+}
