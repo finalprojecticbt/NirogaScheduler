@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Niroga Vaccine Scheduler: Home</title>
+
+   <!-- Linking Bootstrap -->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">   <!-- External  CSS -->
+   <!-- External CSS File -->
+   <link rel="stylesheet" href="style.css">
+   <!-- Icon Files -->
+   <link rel="stylesheet" href="icons\icofont\icofont.min.css">
+   <!-- Carousel CSS File -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
+   <!--Slider-Slick -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+   <!-- Favicon For Website -->
+   <link rel="icon" href="img/favicon.png">
+
+   <style>
+   	   .about{
+   	   	margin-top:1em;
+   	   
+   	   }
+   	
+   	   .about .row{
+   	   	justify-content:space-around;
+   	    gap:10px;
+   	    margin-top:1em;
+   	   }
+       .about img{
+       	width:200px;
+       	height:200px;
+
+
+       }
+       .about .card-body{
+       	 flex:0 0 auto;
+       }
+       .about .card{
+
+       	flex-basis:30%;
+       	align-items:center;
+       	min-width:300px;
+       	margin-bottom:1em;
+       }
+       .about h3.card-text{
+       	  font-size:1.1rem;
+       	  font-weight:bold;
+       }
+       .about p.card-text{
+       	  font-size:0.9rem;
+
+
+       }
+       .about .btn{
+       	  background: #3437A9;
+       	  color:#fff;
+       	  transition:transform 250ms ease-in 250ms;
+       }
+       .about .btn:hover{
+       	 transform:translateX(5px);
+       	 opacity:0.9
+       }
+       .about .full{
+       	flex-basis:97%;
+       	margin-bottom:2em;
+
+       }
+       .about .full img{
+           height:100px;
+       }
+
+
+       @media screen and (max-width:991px) {
+       	    .about .card{
+       	flex-basis:80%;
+       }
+       }
+   </style>
+
+</head>
+<body>
+   <!-- Top-Bar -->
+	<div class="navi-top ">
+		<div class="navi-cont ">
+			<div class="row align-items-center ">
+				<div class="col-md-6 col-lg-6 col-xl-6 float-left">
+					<ul class="navi-top-details list-inline-item pl-0 mb-0">
+						<li class="list-inline-item"><a href="mailto:support@niroga.lk"><i class="icofont-ui-email mr-2"></i>support@niroga.lk</a></li>
+						<li class="list-inline-item"><i class="icofont-building-alt mr-2"></i>No 231, De Saram Place, Colombo 10, Sri Lanka</li>
+					</ul>
+				</div>
+				<div class="col-md-6 col-lg-6 col-xl-6 float-right">
+					<div class="text-lg-right nav-right-col mt-2 mt-lg-0 ">			
+						<i class="icofont-ui-dial-phone mr-2"></i>
+						<a href="tel:011-456-1234" >
+							<span >Give Us a Call: </span>
+							<span >011-456-1234</span>
+						</a>	
+						<li class="list-inline-item ml-5"><a href="https://www.facebook.com" target="_blank"><i class="icofont-facebook mr-2 text-light"></i></a></li>
+						<li class="list-inline-item"><a href="https://www.youtube.com" target="_blank"><i class="icofont-youtube-play mr-2 text-light"></i></a></li>
+						<li class="list-inline-item"><a href="https://www.twitter.com" target="_blank"><i class="icofont-twitter mr-2 text-light"></i></a></li>
+						<li class="list-inline-item"><a href="https://www.instagram.com" target="_blank"><i class="icofont-instagram mr-2 text-light"></i></a></li>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+   <!-- End-Top-Bar -->
+
+   <!-- Navigation Bar -->
+   
+	<nav class="navbar navbar-expand-md navbar-light  sticky-top">
+		<div class="container-fluid">
+			<a  class="navbar-brand" href="index.html"> <img src="img/logo.png"></a> 
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#responsiveNav">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+		<div class="collapse navbar-collapse" id="responsiveNav">
+			   <!-- Nav Bar Items -->
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item active">
+					<a class="nav-link" href="index.html">Home</a>
+				</li>
+		
+				<li class="nav-item">
+					<a class="nav-link" href="vaccines.html">Vaccines</a>
+				</li>
+	
+			    <li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="centerdrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Find Centers <i class="icofont-curved-down"></i></a>
+					<ul class="dropdown-menu" aria-labelledby="centerdrop">
+						<li><a class="dropdown-item" href="all-centers.html">All Centers</a></li>
+						<li><a class="dropdown-item" href=".html">Find By District</a></li>
+					</ul>
+			  	</li>
+	
+				  <li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="helpdrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Help <i class="icofont-curved-down"></i></a>
+					<ul class="dropdown-menu" aria-labelledby="helpdrop">
+						<li><a class="dropdown-item" href="guide.html">How To Book</a></li>
+						<li><a class="dropdown-item" href="faq.html">FAQ</a></li>
+					</ul>
+			  	</li>
+
+				<li class="nav-item">
+					<a class="nav-link" href="about.html">About</a>
+				</li>
+
+				<li class="nav-item">
+					<a class="nav-link" href="contact.html">Contact Us</a>
+				</li>
+				<li class="nav-item">
+					<button type="button" class="btn btn-outline-success" onclick="location.href='booking.php'" >Book Now</button>
+				</li>
+			</ul>
+		  </div>
+		</div>
+      </nav>
+		
+   <!-- End-Navigation Bar -->
+
+    <!-- about section here -->
+    <section class="about">
+    	<div class="container">
+    		<h1 class="text-center">About</h1>
+    		<div class="row">
+    			<div class="card">
+    			<div class="card-body">
+    				<h3 class="card-text">Ministry of health</h3>
+    			</div>
+    			<img src="about-img/moh.jpg" alt="Moh-logo">
+    			<div class="card-body">
+    				<p class="card-text">is the central government ministry of Sri Lanka responsible for health. The ministry is responsible for formulating and implementing national policy on health, nutrition, indigenous medicine and other subjects which come under its purview.</p>
+
+                    <p class="card-text">
+					Provincial councils are constitutionally responsible for operating the majority of the Sri Lanka's public hospitals but some, known as line ministry hospitals, come under the direct control of the central government in Colombo. As of 2016 there were 47 line ministry hospitals (including all of the country's teaching hospitals), accounting for 47% (36,000) of all public hospital beds in the country.
+					</p>
+
+					<a href="http://www.health.gov.lk/moh_final/english/others.php?spid=26" target="_blank" class="btn">More info</a>
+    			</div>
+    		</div>
+
+    		<div class="card">
+    			<div class="card-body">
+    				<h3 class="card-text">Health Promotion Bearu</h3>
+    			</div>
+    			<img src="about-img/hbearu.jpg" alt="Health Bearu-logo">
+    			<div class="card-body">
+    				<p class="card-text">The Health Promotion Bureau (HPB) is the centre of excellence in Sri Lanka for health education, health promotion and publicity of health information. Empowering and mobilizing communities for the improvement of their quality of life through health promotion principles is the main achievement gained during the last few years.</p>
+    				<a href="https://www.hpb.health.gov.lk/en/about-us" target="_blank" class="btn">More info</a>
+    			</div>
+    		</div>
+
+    		<div class="card">
+    			<div class="card-body">
+    				<h3 class="card-text">Epidemiology Unit</h3>
+    			</div>
+    			<img src="about-img/epu.jpg" alt="epu-logo">
+    			<div class="card-body">
+    				<p class="card-text">
+                     ln 1959, after its establishment with the assistance of the WH0, the Epidemiology Unit was operated by a World Health 0rganization(WHO) public health consultant and a local Medical 0fficer qualified in public health. The latter was appointed formally in 1961 as the Epidemiologist. The Unit was housed along with the Public Health Veterinary Services and the Medical Statistics Unit at Chelsea Gardens, Colombo 03.</p>
+                     <p class="card-text">Over the years since 1959, the Unit has been steered by nine Chief Epidemiologists and at present, the Unit functions with a full cadre headed by the Chief Epidemiologist, Dr. Sudath Samaraweera.</p>
+                     <a href="https://www.epid.gov.lk/web/" target="_blank" class="btn">More info</a>
+    			</div>
+    		</div>
+
+    		<div class="card full">
+    			<div class="card-body">
+    				<h3 class="card-text">Niroga</h3>
+    			</div>
+                 <img src="img/logo.png" alt="Niroga Logo">
+    			
+    			<div class="card-body">
+    				
+    				<p class="card-text">Niroga Vaccine sheduler is the online Vaccine sheduling web app that was developed to allow people to book their vaccinations via online, it partners with the ministry of health , health promotion bearu and the srilankan governerment. the goal of this application is to make the vaccination process even more efficent.The word <strong>Niroga</strong>, a Sanskrit word which means means “freedom from disease,” or integral health.</p>
+    			</div>
+    		</div> 
+    		</div>
+    		
+    	</div>
+    </section>
+
+<!-- Footer -->
+<footer class="footer section black-background ">
+	<div class="container text-lg-left text-center">
+		<div class="row">
+			<div class="col-lg-4 mr-auto col-sm-6 ">
+					<div class="logo mb-4">
+						<img src="img/logo-t.png" alt="" class="img-fluid">
+					</div>
+					<p>Online Vaciine Scheduling at Your Fingertips.</p>
+
+					<ul class="list-inline footer-socials mt-4">
+						<li class="list-inline-item ml-5"><a href="https://www.facebook.com" target="_blank"><i class="icofont-facebook mr-2 text-light"></i></a></li>
+						<li class="list-inline-item"><a href="https://www.youtube.com" target="_blank"><i class="icofont-youtube-play mr-2 text-light"></i></a></li>
+						<li class="list-inline-item"><a href="https://www.twitter.com" target="_blank"><i class="icofont-twitter mr-2 text-light"></i></a></li>
+						<li class="list-inline-item"><a href="https://www.instagram.com" target="_blank"><i class="icofont-instagram mr-2 text-light"></i></a></li>
+						</ul>
+			</div>
+
+			<div class="col-lg-2 col-md-6 col-sm-6">
+					<h4>Organization</h4>
+
+					<ul class="list-unstyled footer-menu">
+						<li><a href="#">Vaccines </a></li>
+						<li><a href="#">Centers</a></li>
+						<li><a href="#">Help</a></li>
+						<li><a href="#">About</a></li>
+						<li><a href="#">Govenrment</a></li>
+
+					</ul>
+			</div>
+
+			<div class="col-lg-2 col-md-6 col-sm-6">
+					<h4>Support</h4>
+					<ul class="list-unstyled footer-menu lh-35">
+						<li><a href="#">Privacy Policy</a></li>
+						<li><a href="#">Storage</a></li>
+						<li><a href="#">FAQ</a></li>
+						<li><a href="#">Licence</a></li>
+						<li><a href="#">Terms & Conditions</a></li>
+
+					</ul>
+			</div>
+
+			<div class="col-lg-3 col-md-6 col-sm-6">
+					<h4>Contact Us</h4>
+
+							<i class="icofont-ui-dial-phone mr-3"></i>
+							<a href="tel:011-456-1233" >
+							<span >011-456-1233</span> </a>
+							<h6 class="mt-2"><a href=""></a></h6>
+
+							<i class="icofont-ui-dial-phone mr-3"></i>
+							<a href="tel:011-456-1234" >
+							<span >011-456-1234</span> </a>
+							<h6 class="mt-2"><a href=""></a></h6>
+
+
+							<i class="icofont-ui-email mr-3"></i>
+							<a href="mailto:support@niroga.lk" >
+							<span >support@niroga.lk</span> </a>
+							<h6 class="mt-2"><a href=""></a></h6>
+
+							<i class="icofont-building-alt mr-3"></i>
+							<a href="#" >
+							<span >No 231, De Saram Place, Colombo 10, Sri Lanka</span> </a>
+							<h6 class="mt-2"><a href=""></a></h6>
+
+					</div>
+				</div>
+			</div>
+		  <div class="footer-bottom">
+		      <p>©2021 Developed By Codex Software Solutions</p>
+	     </div>
+     </footer>
+<!-- End-Footer -->
+
+
+<!-- Linking Bootrap and JS Sources -->
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="js/numcount.js"></script>
+
+
+</body>
+</html>
