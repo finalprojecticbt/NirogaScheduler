@@ -140,8 +140,10 @@ if ($_SESSION["loggedStat"] == false) {
 				<li class="nav-item2">
 					<a class="nav-link" href="cancel.php">Cancel Appointments</a>
 				</li>
-	
-	
+				<li class="nav-item2">
+				<button type="button" class = "logoutBtn btn-outline-info"  onclick="location.href='logout.php';">Logout</button>
+
+			</li>
 			</ul>
 		  </div>
 		</div>
@@ -159,17 +161,30 @@ if ($_SESSION["loggedStat"] == false) {
 
 
 
- <div class="container d-flex justify-content-center mt-5 mb-3">
+ <div class="container d-flex justify-content-center mt-5 mb-3 ">
 
 
  <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" id = "mysubmitforum">
-  <label for="date">Appointment Date:</label>
+
+ <label for="vaccine">Vaccine</label>
+ <select id="vaccine" name="vaccine">
+    <option value='Covishield-COVID-19-Dose-1' selected value >Covishield: Dose 1</option>
+    <option value='Covishield-COVID-19-Dose-1'>Covishield COVID-19: Dose 1</option>
+    <option value='Pfizer-BioNTech-COVID-19-Dose-1'>Pfizer-BioNTech COVID-19: Dose 1</option>
+	<option value='Pfizer-BioNTech-COVID-19-Dose-2'>Pfizer-BioNTech COVID-19: Dose 1</option>
+	<option value='Covishield-COVID-19-Dose-1'>Covishield COVID-19: Dose 1</option>
+
+</select>
+
+
+
+ <label for="date">Appointment Date:</label>
   <input type="date" id="appDate" name="appDate" required>
+
+ 
 
   <label for="time">Time:</label>
   <input type="time" id="appTime" name="appTime" required>
-
-
 
 
 
@@ -181,7 +196,7 @@ if ($_SESSION["loggedStat"] == false) {
 	<option value='Rathnapura'>Rathnapura</option>
 	<option value='Kandy'>Kandy</option>
 
-<select>
+</select>
 <label for="sub_groups">Center</label>
 <select id="sub_groups" name="cenName">
     <option data-group='Colombo' value='Dehiwala'>Dehiwala</option>
@@ -200,8 +215,7 @@ if ($_SESSION["loggedStat"] == false) {
     <option data-group='Kandy' value='Center'>Center</option>
     <option data-group='Kandy' value='Center'>Center</option>
 
-<select>
-
+	</select>
 
 		<input type="submit" id = "mysubmit" name="mysubmit" value ="Book">	
 	</form>
