@@ -184,18 +184,8 @@ if ($_SESSION["loggedStat"] == false) {
 </p>
 
 
-<p><label for="date">Date:</label>
-	<input type="date" id="appDate" name="appDate" required>
-</p>
 
- 
-<p>
-  <label for="time">Time:</label>
-  <input type="time" id="appTime" name="appTime" required>
-</p>
-
-
- <label for="groups">District:</label>
+ <label for="groups">District</label>
  <select id="groups"  id="time" name="disName">
     <option value='Colombo'>Colombo</option>
     <option value='Gampaha'>Gampaha</option>
@@ -204,7 +194,7 @@ if ($_SESSION["loggedStat"] == false) {
 	<option value='Kandy'>Kandy</option>
 
 </select>
-<label for="sub_groups">Center:</label>
+<label for="sub_groups">Center</label>
 <select id="sub_groups" name="cenName">
     <option data-group='Colombo' value='Dehiwala'>Dehiwala</option>
     <option data-group='Colombo' value='Maharagama'>Maharagama</option>
@@ -224,7 +214,7 @@ if ($_SESSION["loggedStat"] == false) {
 
 	</select>
 
-	<p><input type="submit" id = "mysubmit" name="mysubmit" class="d-flex justify-content-center" value ="Book"></p>
+	<p><input type="submit" id = "mysubmit" name="mysubmit" class="d-flex justify-content-center" value ="Check"></p>
 	</form>
 
 	</div>

@@ -323,9 +323,23 @@ footer.footer-wrap > * {
   }
 
 
-  .nav-item2 > a {
+.nav-item2 > a {
     color: #ffffff !important;
 }
 .nav-item2 > a:hover {
   color: #3bd880  !important;
+}
+
+.login-header,
+.login p {
+  margin-top: 10;
+  margin-bottom: 10;
+}
+
+#mysubmit {
+  margin:auto;
+  margin-top: 20px;
+  display:block;
+  width: 100px;
+  height: 40px;
 }

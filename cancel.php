@@ -170,61 +170,13 @@ if ($_SESSION["loggedStat"] == false) {
 
  <form action="<?php echo $_SERVER['PHP_SELF']; ?>" class="login-container2" method="post" id = "mysubmitforum">
  
+
  <p>
- <label for="vaccine">Vaccine:</label>
-	 <select id="vaccine" name="vaccine">
-    <option value='Covishield-COVID-19-Dose-1' selected value >Covishield COVID-19: Dose 1</option>
-    <option value='Covishield-COVID-19-Dose-1'>Covishield COVID-19: Dose 2</option>
-    <option value='Pfizer-BioNTech-COVID-19-Dose-1'>Pfizer-BioNTech COVID-19: Dose 1</option>
-	<option value='Pfizer-BioNTech-COVID-19-Dose-2'>Pfizer-BioNTech COVID-19: Dose 2</option>
-	<option value='Covishield-COVID-19-Dose-1'>Synopharm COVID-19: Dose 1</option>
-	<option value='Covishield-COVID-19-Dose-1'>Synopharm COVID-19: Dose 2</option>
-
-</select>
+  <label for="time">Appintment ID:</label>
+  <input type="text" id="appTime" name="appTime" required>
 </p>
 
-
-<p><label for="date">Date:</label>
-	<input type="date" id="appDate" name="appDate" required>
-</p>
-
- 
-<p>
-  <label for="time">Time:</label>
-  <input type="time" id="appTime" name="appTime" required>
-</p>
-
-
- <label for="groups">District:</label>
- <select id="groups"  id="time" name="disName">
-    <option value='Colombo'>Colombo</option>
-    <option value='Gampaha'>Gampaha</option>
-    <option value='Kalutara'>Kalutara</option>
-	<option value='Rathnapura'>Rathnapura</option>
-	<option value='Kandy'>Kandy</option>
-
-</select>
-<label for="sub_groups">Center:</label>
-<select id="sub_groups" name="cenName">
-    <option data-group='Colombo' value='Dehiwala'>Dehiwala</option>
-    <option data-group='Colombo' value='Maharagama'>Maharagama</option>
-    <option data-group='Colombo' value='Baththaramulla'>Baththaramulla</option>
-	<option data-group='Colombo' value='Ratmalana'>Ratmalana</option>
-	<option data-group='Colombo' value='Pitakotte'>Pitakotte</option>
-    <option data-group='Gampaha' value='Center'>Center</option>
-    <option data-group='Gampaha' value='Center'>Center</option>
-    <option data-group='Gampaha' value='Center'>Center</option>
-    <option data-group='Kalutara' value='Center'>Center</option>
-    <option data-group='Kalutara' value='Center'>Center</option>
-	<option data-group='Kalutara' value='Center'>Center</option>
-    <option data-group='Rathnapura' value='Center'>Center</option>
-    <option data-group='Rathnapura' value='Center'>Center</option>
-    <option data-group='Kandy' value='Center'>Center</option>
-    <option data-group='Kandy' value='Center'>Center</option>
-
-	</select>
-
-	<p><input type="submit" id = "mysubmit" name="mysubmit" class="d-flex justify-content-center" value ="Book"></p>
+	<p><input type="submit" id = "mysubmit" name="mysubmit" class="d-flex justify-content-center" value ="Cancel"></p>
 	</form>
 
 	</div>
