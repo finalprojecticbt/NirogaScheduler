@@ -20,30 +20,6 @@
    <!-- Favicon For Website -->
    <link rel="icon" href="img/favicon.png">
 
-   <style>
-	    @import url('https://fonts.googleapis.com/css2?family=Sulphur+Point:wght@300;400;700&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Sulphur+Point:wght@300;400;700&family=Varela+Round&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Sulphur+Point:wght@300;400;700&family=Varela+Round&display=swap');
-        
-        *,*::before,*::after{
-          box-sizing:border-box;
-        }
-        :root{
-            --background:#0067D9;
-            --H_M:#00498A;
-            --darkblue:#101022;
-            --navyblue:#121256;
-          }
-		.header_main{
-			font-size: 3rem;
-			line-height: 1.16667;
-			font-weight: 600;
-			margin-top: 0.5em;
-			margin-bottom: 1em;
-		}
-
-   </style>
-
 </head>
 <body>
    <!-- Top-Bar -->
@@ -85,7 +61,7 @@
 		<div class="collapse navbar-collapse" id="responsiveNav">
 			   <!-- Nav Bar Items -->
 			<ul class="navbar-nav ml-auto">
-				<li class="nav-item active">
+				<li class="nav-item ">
 					<a class="nav-link" href="index.html">Home</a>
 				</li>
 		
@@ -96,16 +72,16 @@
 			    <li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" href=".html" id="centerdrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Find Centers <i class="icofont-curved-down"></i></a>
 					<ul class="dropdown-menu" aria-labelledby="centerdrop">
-						<li><a class="dropdown-item" href=".html">All Centers</a></li>
-						<li><a class="dropdown-item" href=".html">Find By District</a></li>
+						<li><a class="dropdown-item" href="all-centers.html">All Centers</a></li>
+						<li><a class="dropdown-item" href="search-centers.html">Find By District</a></li>
 					</ul>
 			  	</li>
 	
-				  <li class="nav-item dropdown">
+				  <li class="nav-item dropdown active">
 					<a class="nav-link dropdown-toggle" href=".html" id="helpdrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Help <i class="icofont-curved-down"></i></a>
 					<ul class="dropdown-menu" aria-labelledby="helpdrop">
-						<li><a class="dropdown-item" href=".html">How To Book</a></li>
-						<li><a class="dropdown-item" href=".html">FAQ</a></li>
+						<li><a class="dropdown-item" href="guide.html">How To Book</a></li>
+						<li><a class="dropdown-item" href="faq.html">FAQ</a></li>
 					</ul>
 			  	</li>
 
@@ -128,67 +104,67 @@
 
  <!-- How to book - body  -->
 
-	<div class="container">
- 		<div class="row_align">
-			<div class="">
-				<h1 class="header_main">Book or manage your<br> vaccination</h1>
-			</div>
-			<div class="col-md-12">
-				<h2>New Patient</h2>
-				<p>patient need to register in the application in order 
-					to booking the appointments for the vaccinations. Patient need 
-					to provide his / her information when register  </p>
 
-				<img src="img/fined vaccine center.png" class="img-fluid" alt="...">
-				<p>You can register with this link<a href="#"> Sign Up</a> if you do not have one.</p>
-				<p>Patient’s date of birth is required.
-					Patient need to provide phone number in order to get the authentication 
-					 code for the vaccination. also, National ID number required and it will 
-					 used to track their all-vaccination status. </p>
-			</div>
-			<div class="col-md-12">
-				<h2>Already have an account? </h2>
-				<p>Patient can login to the account by using username and password </p>
 
-				<img src="img/fined vaccine center.png" class="img-fluid" alt="...">
-				<p>You can log In with this link<a href="#"> Log In</a> if you have an account.</p>
-			</div>
-			<div class="col-md-12">
-				<h2>Select Vaccine </h2>
-				<p>Customers are able to select the vaccine for particular disease. They can choose the vaccine brand  </p>
+ <div class="container w-75 mt-3">
+	<h1 class="font-weight-bold text-center">How to Make Appointments</h1>
 
-				<img src="img/fined vaccine center.png" class="img-fluid" alt="...">
-				<p>You can Select Vaccine with this link<a href="#"> Vaccine</a> if you have an account.</p>
-			</div>
-			<div class="col-md-12">
-				<h2>Book Appointment  </h2>
-				<p>Customer can choose desired date and time for the appointment when booking.</p>
+	<div class="card text-dark card border-primary bg-light  mt-5 mb-3" >
+		<div class="card-header">New Patient</div>
+		<div class="card-body">
+		  <h5 class="card-title text-justify">How to Register</h5>
+		  <p class="card-text text-justify">Patient need to register in the application in order to booking the appointments for the vaccinations. Patient need to provide his/her information when register. </p>
+		  <p class="card-text text-justify">You can register with this link<a href="register.php"> Register, </a> if you do not have one.</p>
+		  <p class="card-text text-justify">Patient’s date of birth is required. Patient need to provide phone number in order to get the authentication code for the vaccination. also, National ID number required and it will used to track their all-vaccination status. </p>
+		</div>
+</div>
 
-				<img src="img/fined vaccine center.png" class="img-fluid" alt="...">
-				<p>You can Book Appointment with this link<a href="#"> Book Now</a></p>
-			</div>
-
-			<div class="col-md-12">
-				<h2>Select Nearest Vaccine Center </h2>
-				<p>Patient can select vaccine center by 'find by district and all centers'. 
-					Patient can see drop down of the districts. After they have chosen their district,
-					 all the vaccine centers will be showed to the customer in the particular district. So,
-					  the customer can choose the nearest vaccine center to them.  </p>
-				<div class="d-flex">
-					<img src="img/how to book/fined vaccine center.png" class="img-fluid" alt="..." style="max-width: 50%">
-					<img src="img/how to book/Screenshot 2021-09-08 131628.png" class="img-fluid" alt="..." style="max-width: 50%">
-				</div>
-				
-				<p> Select Nearest Vaccine Center by<a href="#"> All Centers</a> </p>
-				<p>Select Nearest Vaccine Center by<a href="#"> Find By District</a> </p>
-			</div>
-			
-	  </div>
+<div class="card text-dark card border-primary bg-light  mt-5 mb-3" >
+	<div class="card-header">Patient Login</div>
+	<div class="card-body">
+	  <h5 class="card-title text-justify">How to Login</h5>
+	  <p class="card-text text-justify">Patient can login to the account by using username and password.</p>
+	  <p class="card-text text-justify">You can log In with this link<a href="login.php"> Log In, </a> if you have an account. </a></p>
 	</div>
+</div>
 
 
+<div class="card text-dark card border-primary bg-light  mt-5 mb-3" >
+	<div class="card-header">Select Vaccine</div>
+	<div class="card-body">
+	  <h5 class="card-title text-justify">How to Select Vaccine</h5>
+	  <p class="card-text text-justify">Customers are able to select the vaccine for particular disease. They can choose the vaccine brand or type.</p>
+	  <p class="card-text text-justify">You can Select Vaccine with this link<a href="vaccines.html"> Vaccine</a> if you have an account.</p>
+	</div>
+</div>
 
-   
+
+<div class="card text-dark card border-primary bg-light  mt-5 mb-3" >
+	<div class="card-header">Select Nearest Vaccine Center</div>
+	<div class="card-body">
+	  <h5 class="card-title text-justify">How to Select Vaccine Center</h5>
+	  <p class="card-text text-justify">Patient can select vaccine center by 'find by district and all centers'. Patient can see drop down of the districts.</p>
+	  <p class="card-text text-justify"> After they have chosen their district, all the vaccine centers will be showed to the customer in the particular district. So, the customer can choose the nearest vaccine center to them.</p>
+	  <p class="card-text text-justify">Select Nearest Vaccine Center by<a href="all-centers.html"> All Centers</a> </p>
+	  <p class="card-text text-justify">Select Nearest Vaccine Center by<a href="search-centers"> Find By District</a></p>
+	</div>
+</div>
+
+
+<div class="card text-dark card border-primary bg-light  mt-5 mb-3" >
+	<div class="card-header">Book Appointment</div>
+	<div class="card-body">
+	  <h5 class="card-title text-justify">How to Book</h5>
+	  <p class="card-text text-justify">Customer can choose desired date and time for the appointment when booking.</p>
+	  <p class="card-text text-justify">You can Book Appointment with this link<a href="booking.php"> Book Now</a></p>
+	 
+	</div>
+</div>
+
+
+ </div>
+
+
 <!-- Footer -->
 <footer class="footer section black-background ">
 	<div class="container text-lg-left text-center">

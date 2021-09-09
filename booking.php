@@ -80,7 +80,7 @@ if ($_SESSION["loggedStat"] == false) {
 		<div class="collapse navbar-collapse" id="responsiveNav">
 			   <!-- Nav Bar Items -->
 			<ul class="navbar-nav ml-auto">
-				<li class="nav-item active">
+				<li class="nav-item">
 					<a class="nav-link" href="index.html">Home</a>
 				</li>
 		
@@ -91,16 +91,16 @@ if ($_SESSION["loggedStat"] == false) {
 			    <li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" href=".html" id="centerdrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Find Centers <i class="icofont-curved-down"></i></a>
 					<ul class="dropdown-menu" aria-labelledby="centerdrop">
-						<li><a class="dropdown-item" href=".html">All Centers</a></li>
-						<li><a class="dropdown-item" href=".html">Find By District</a></li>
+						<li><a class="dropdown-item" href="all-centers.html">All Centers</a></li>
+						<li><a class="dropdown-item" href="search-centers.html">Find By District</a></li>
 					</ul>
 			  	</li>
 	
 				  <li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" href=".html" id="helpdrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Help <i class="icofont-curved-down"></i></a>
 					<ul class="dropdown-menu" aria-labelledby="helpdrop">
-						<li><a class="dropdown-item" href=".html">How To Book</a></li>
-						<li><a class="dropdown-item" href=".html">FAQ</a></li>
+						<li><a class="dropdown-item" href="guide.html">How To Book</a></li>
+						<li><a class="dropdown-item" href="faq.html">FAQ</a></li>
 					</ul>
 			  	</li>
 
