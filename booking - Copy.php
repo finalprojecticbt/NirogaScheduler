@@ -1,3 +1,21 @@
+<?php
+// Start the session
+session_start();
+
+/*
+
+if ($_SESSION["loggedStat"] == false) {
+  header('location: login.php');
+  die;
+
+*/
+}
+
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,18 +30,15 @@
    <link rel="stylesheet" href="style.css">
    <!-- Icon Files -->
    <link rel="stylesheet" href="icons\icofont\icofont.min.css">
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
    <!-- Carousel CSS File -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
    <!--Slider-Slick -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
    <!-- Favicon For Website -->
    <link rel="icon" href="img/favicon.png">
-   <script src="js/loginValidate.js"></script>
-
-
 </head>
 <body class="d-flex flex-column min-vh-100">
    <!-- Top-Bar -->
@@ -65,7 +80,7 @@
 		<div class="collapse navbar-collapse" id="responsiveNav">
 			   <!-- Nav Bar Items -->
 			<ul class="navbar-nav ml-auto">
-				<li class="nav-item active">
+				<li class="nav-item">
 					<a class="nav-link" href="index.html">Home</a>
 				</li>
 		
@@ -76,16 +91,16 @@
 			    <li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" href=".html" id="centerdrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Find Centers <i class="icofont-curved-down"></i></a>
 					<ul class="dropdown-menu" aria-labelledby="centerdrop">
-						<li><a class="dropdown-item" href=".html">All Centers</a></li>
-						<li><a class="dropdown-item" href=".html">Find By District</a></li>
+						<li><a class="dropdown-item" href="all-centers.html">All Centers</a></li>
+						<li><a class="dropdown-item" href="search-centers.html">Search Centers</a></li>
 					</ul>
 			  	</li>
 	
 				  <li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" href=".html" id="helpdrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Help <i class="icofont-curved-down"></i></a>
 					<ul class="dropdown-menu" aria-labelledby="helpdrop">
-						<li><a class="dropdown-item" href=".html">How To Book</a></li>
-						<li><a class="dropdown-item" href=".html">FAQ</a></li>
+						<li><a class="dropdown-item" href="guide.html">How To Book</a></li>
+						<li><a class="dropdown-item" href="faq.html">FAQ</a></li>
 					</ul>
 			  	</li>
 
@@ -106,58 +121,142 @@
 		
    <!-- End-Navigation Bar -->
 
+
+   <!-- Navigation Bar -->
+   
    <nav class="navbar navbar-expand-md bg-primary">
-	<div class="container">
-		   <!-- Nav Bar Items -->
-		<ul class="navbar-nav ml-auto">
+		<div class="container">
+			   <!-- Nav Bar Items -->
+			<ul class="navbar-nav ml-auto">
 
-			<li class="nav-item2 ">
-				<a class="nav-link" href="register.php">Register</a>
+				<li class="nav-item2 ">
+					<a class="nav-link" href="booking.php">Create Appointments</a>
+				</li>
+				
+				<li class="nav-item2 ">
+					<a class="nav-link" href="check.php">Check Vaccine Availability</a>
+				</li>
+
+				<li class="nav-item2 ">
+					<a class="nav-link" href="view.php">View Appointments</a>
+				</li>
+				
+				<li class="nav-item2">
+					<a class="nav-link" href="cancel.php">Cancel Appointments</a>
+				</li>
+				<li class="nav-item2">
+				<button type="button" class = "logoutBtn btn-outline-info"  onclick="location.href='logout.php';">Logout</button>
+
 			</li>
-			
+			</ul>
+		  </div>
+		</div>
+      </nav>
 
-		</ul>
-	  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+ <div class="container d-flex justify-content-center mt-5 mb-3 ">
+ <div class="login">
+
+ <form action="<?php echo $_SERVER['PHP_SELF']; ?>" class="login-container2" method="post" id = "mysubmitforum">
+ 
+ <p>
+ <label for="vaccine">Vaccine:</label>
+	 <select id="vaccine" name="vaccine">
+    <option value='Covishield-COVID-19-Dose-1' selected value >Covishield COVID-19: Dose 1</option>
+    <option value='Covishield-COVID-19-Dose-1'>Covishield COVID-19: Dose 2</option>
+    <option value='Pfizer-BioNTech-COVID-19-Dose-1'>Pfizer-BioNTech COVID-19: Dose 1</option>
+	<option value='Pfizer-BioNTech-COVID-19-Dose-2'>Pfizer-BioNTech COVID-19: Dose 2</option>
+	<option value='Covishield-COVID-19-Dose-1'>Synopharm COVID-19: Dose 1</option>
+	<option value='Covishield-COVID-19-Dose-1'>Synopharm COVID-19: Dose 2</option>
+
+</select>
+</p>
+
+
+<p><label for="date">Date:</label>
+	<input type="date" id="appDate" name="appDate" required>
+</p>
+
+ 
+<p>
+  <label for="time">Time:</label>
+  <input type="time" id="appTime" name="appTime" required>
+</p>
+
+
+ <label for="groups">District:</label>
+ <select id="groups"  id="time" name="disName">
+    <option value='Colombo'>Colombo</option>
+    <option value='Gampaha'>Gampaha</option>
+    <option value='Kalutara'>Kalutara</option>
+	<option value='Rathnapura'>Rathnapura</option>
+	<option value='Kandy'>Kandy</option>
+
+</select>
+<label for="sub_groups">Center:</label>
+<select id="sub_groups" name="cenName">
+    <option data-group='Colombo' value='Dehiwala'>Dehiwala</option>
+    <option data-group='Colombo' value='Maharagama'>Maharagama</option>
+    <option data-group='Colombo' value='Baththaramulla'>Baththaramulla</option>
+	<option data-group='Colombo' value='Ratmalana'>Ratmalana</option>
+	<option data-group='Colombo' value='Pitakotte'>Pitakotte</option>
+    <option data-group='Gampaha' value='Center'>Center</option>
+    <option data-group='Gampaha' value='Center'>Center</option>
+    <option data-group='Gampaha' value='Center'>Center</option>
+    <option data-group='Kalutara' value='Center'>Center</option>
+    <option data-group='Kalutara' value='Center'>Center</option>
+	<option data-group='Kalutara' value='Center'>Center</option>
+    <option data-group='Rathnapura' value='Center'>Center</option>
+    <option data-group='Rathnapura' value='Center'>Center</option>
+    <option data-group='Kandy' value='Center'>Center</option>
+    <option data-group='Kandy' value='Center'>Center</option>
+
+	</select>
+
+	<p><input type="submit" id = "mysubmit" name="mysubmit" class="d-flex justify-content-center" value ="Book"></p>
+	</form>
+
 	</div>
-  </nav>
+ </div>
 
 
 
 
+<script>
 
-<h2 class="text-center"><u>Login</u></h2>
-  <div class="container w-50 d-flex justify-content-center mt-5 mb-5 border border-primary rounded">
-	<div class="row mx-4 my-4">
-	  <div class="col-xs-6">
-
-		<form class="form-horizontal" id="form" name="myForm" action = "" method="post"  onsubmit="return loginValidate()">
-		  <div class="form-group">
-			<label for="username" class="col-xs-2">Username:</label>
-			<div class="col-xs-10">
-			  <input type="text" class="form-control" id="username" placeholder="Username" />
-			</div>
-			<div id="userErr"></div >
-		  </div>
-
-		  <div class="form-group">
-			<label for="password" class="col-xs-2">Password:</label>
-			<div class="col-xs-10">
-			<input type="password" class="form-control" id="password" placeholder="Password" />
-			</div>
-			<div id="passErr"></div >
-		  </div>
-		  
-		  <div class="col-xs-10 col-xs-offset-2 row justify-content-center">
-			<button type="submit" class="btn btn-primary">Submit</button>
-		  </div>
-		  
-		</form>
-	  </div>
-	</div>
-  </div>
-
-
-
+$(function(){
+    $('#groups').on('change', function(){
+        var val = $(this).val();
+        var sub = $('#sub_groups');
+        $('option', sub).filter(function(){
+            if (
+                 $(this).attr('data-group') === val 
+              || $(this).attr('data-group') === 'SHOW'
+            ) {
+              if ($(this).parent('span').length) {
+                $(this).unwrap();
+              }
+            } else {
+              if (!$(this).parent('span').length) {
+                $(this).wrap( "<span>" ).parent().hide();
+              }
+            }
+        });
+    });
+    $('#groups').trigger('change');
+});
+</script>
 
 
 
@@ -241,6 +340,7 @@
 
 <!-- Linking Bootrap and JS Sources -->
 
+    <script  src="https://code.jquery.com/jquery-3.6.0.js"  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="  crossorigin="anonymous"></script>
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

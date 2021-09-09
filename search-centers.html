@@ -11,6 +11,7 @@
    <!-- External CSS File -->
    <link rel="stylesheet" href="style.css">
    <link rel="stylesheet" href="style-search.css">
+   <script src="js/search-center.js"></script>
 
    <!-- Icon Files -->
    <link rel="stylesheet" href="icons\icofont\icofont.min.css">
@@ -110,7 +111,7 @@
 	
 	
 
-	<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Enter City Name..." title="Type in a name">
+	<input type="text" id="searchInput" onkeyup="searchCenter()" placeholder="Enter City Name..." title="Type in a name">
    
 	<ul id="myUL">
 	  <li><a href="#">MOH Office, Dehiwala</a></li>
@@ -131,24 +132,7 @@
 
  
    
-   <script>
-   function myFunction() {
-	   var input, filter, ul, li, a, i, txtValue;
-	   input = document.getElementById("myInput");
-	   filter = input.value.toUpperCase();
-	   ul = document.getElementById("myUL");
-	   li = ul.getElementsByTagName("li");
-	   for (i = 0; i < li.length; i++) {
-		   a = li[i].getElementsByTagName("a")[0];
-		   txtValue = a.textContent || a.innerText;
-		   if (txtValue.toUpperCase().indexOf(filter) > -1) {
-			   li[i].style.display = "";
-		   } else {
-			   li[i].style.display = "none";
-		   }
-	   }
-   }
-   </script>
+
    
 
 
