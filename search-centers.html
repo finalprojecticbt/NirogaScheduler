@@ -10,6 +10,8 @@
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">   <!-- External  CSS -->
    <!-- External CSS File -->
    <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="style-search.css">
+
    <!-- Icon Files -->
    <link rel="stylesheet" href="icons\icofont\icofont.min.css">
    <!-- Carousel CSS File -->
@@ -73,7 +75,7 @@
 					<a class="nav-link dropdown-toggle" href=".html" id="centerdrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Find Centers <i class="icofont-curved-down"></i></a>
 					<ul class="dropdown-menu" aria-labelledby="centerdrop">
 						<li><a class="dropdown-item" href="all-centers.html">All Centers</a></li>
-						<li><a class="dropdown-item" href="search-centers.html">Find By District</a></li>
+						<li><a class="dropdown-item" href="search-centers.html">Search Centers</a></li>
 					</ul>
 			  	</li>
 	
@@ -102,7 +104,52 @@
 		
    <!-- End-Navigation Bar -->
 
+   <div class="container w-75 mt-5 mb-3">
 
+	<h3 class="align-txtcenter">Search Centers</h3>
+	
+	
+
+	<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Enter City Name..." title="Type in a name">
+   
+	<ul id="myUL">
+	  <li><a href="#">MOH Office, Dehiwala</a></li>
+	  <li><a href="#">MOH Office, Maharagama</a></li>
+	  <li><a href="#">MOH Office, Baththaramulla</a></li>
+	  <li><a href="#">MOH Office, Ratmalana</a></li>
+	  <li><a href="#">MOH Office, Pitakotte</a></li>
+	  <li><a href="#">MOH Office, Divulapitiya</a></li>
+	  <li><a href="#">MOH Office, Matugama</a></li>
+	  <li><a href="#">MOH Office, Bulathsinhala</a></li>
+	  <li><a href="#">MOH Office, Horana</a></li>
+	  <li><a href="#">MOH Office, Bandaragama</a></li>
+
+	</ul>
+
+	
+</div>
+
+ 
+   
+   <script>
+   function myFunction() {
+	   var input, filter, ul, li, a, i, txtValue;
+	   input = document.getElementById("myInput");
+	   filter = input.value.toUpperCase();
+	   ul = document.getElementById("myUL");
+	   li = ul.getElementsByTagName("li");
+	   for (i = 0; i < li.length; i++) {
+		   a = li[i].getElementsByTagName("a")[0];
+		   txtValue = a.textContent || a.innerText;
+		   if (txtValue.toUpperCase().indexOf(filter) > -1) {
+			   li[i].style.display = "";
+		   } else {
+			   li[i].style.display = "none";
+		   }
+	   }
+   }
+   </script>
+   
 
 
 

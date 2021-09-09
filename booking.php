@@ -92,7 +92,7 @@ if ($_SESSION["loggedStat"] == false) {
 					<a class="nav-link dropdown-toggle" href=".html" id="centerdrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Find Centers <i class="icofont-curved-down"></i></a>
 					<ul class="dropdown-menu" aria-labelledby="centerdrop">
 						<li><a class="dropdown-item" href="all-centers.html">All Centers</a></li>
-						<li><a class="dropdown-item" href="search-centers.html">Find By District</a></li>
+						<li><a class="dropdown-item" href="search-centers.html">Search Centers</a></li>
 					</ul>
 			  	</li>
 	
