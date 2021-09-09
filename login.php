@@ -12,6 +12,8 @@
    <link rel="stylesheet" href="style.css">
    <!-- Icon Files -->
    <link rel="stylesheet" href="icons\icofont\icofont.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
    <!-- Carousel CSS File -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
@@ -19,6 +21,8 @@
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
    <!-- Favicon For Website -->
    <link rel="icon" href="img/favicon.png">
+   <script src="js/loginValidate.js"></script>
+
 
 </head>
 <body class="d-flex flex-column min-vh-100">
@@ -123,7 +127,7 @@
 
    <h2 class="text-center"><u>Login</u></h2>
 
-  <div class="container w-50 d-flex justify-content-center mt-5 mb-5 border border-primary">
+  <div class="container w-50 d-flex justify-content-center mt-5 mb-5 border border-primary rounded">
 	<div class="row mx-4 my-4">
 	  <div class="col-xs-6">
 
@@ -133,6 +137,8 @@
 			<div class="col-xs-10">
 			  <input type="text" class="form-control" id="username" placeholder="Username" />
 			</div>
+			<div id="userErr"></div >
+
 		  </div>
 		
 
@@ -141,6 +147,8 @@
 			<div class="col-xs-10">
 			<input type="password" class="form-control" id="password" placeholder="Password" />
 			</div>
+			<div id="passErr"></div >
+
 		  </div>
 		  
 
