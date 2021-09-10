@@ -148,23 +148,23 @@ if ($_SESSION["loggedStat"] == false) {
 	  <div class="col-xs-6">
 		<form class="form-horizontal" id="form" name="myForm" action = "" method="post"  onsubmit="return registerValidate()">
 		  <div class="form-group">
-			<label for="nameField" class="col-xs-2">Username</label>
+			<label for="nameField" class="col-xs-2">Username:</label>
 			<div class="col-xs-10">
-			  <input type="text" class="form-control" id="username" name="username" placeholder="Your Name" />
+			  <input type="text" class="form-control" id="username" name="username" placeholder="Your Username" />
 			</div>
 		  </div>
 		
 		  <div class="form-group">
-			<label for="emailField" class="col-xs-2">Email</label>
+			<label for="emailField" class="col-xs-2">Email:</label>
 			<div class="col-xs-10">
-			  <input type="text" class="form-control" id="email"  name="email" placeholder="Your Email" />
+			  <input type="email" class="form-control" id="email"  name="email" placeholder="Your Email" />
 			</div>
 		  </div>
 		
 		  <div class="form-group">
 			<label for="phoneField" class="col-xs-2">NIC:</label>
 			<div class="col-xs-10">
-			  <input type="text" class="form-control" id="nic" name="nic" placeholder="Your Phone Number" />
+			  <input type="text" class="form-control" id="nic" name="nic" placeholder="Your ID Number" />
 			</div>
 		  </div>
 
@@ -178,7 +178,7 @@ if ($_SESSION["loggedStat"] == false) {
 		  <div class="form-group">
 			<label for="phoneField" class="col-xs-2">Date of Birth</label>
 			<div class="col-xs-10">
-			  <input type="text" class="form-control" id="dob" name="dob" placeholder="Your Phone Number" />
+			<input type="text" placeholder="YYYY-MM-DD" id="dob" name="dob"/>
 			</div>
 		  </div>
 		
@@ -195,31 +195,20 @@ if ($_SESSION["loggedStat"] == false) {
 			</div>
 		  </div>
 
-
-
-
-
-
 		  <div class="form-group">
-			<label for="descField" class="col-xs-2">Password</label>
+			<label for="descField" class="col-xs-2">Password:</label>
 			<div class="col-xs-10">
-			<input type="password" class="form-control" id="password" name="password" placeholder="Your Phone Number" />
+			<input type="password" class="form-control" id="password" name="password"/>
 			</div>
 		  </div>
 
-
-
-
-
 		  <div class="form-group">
-			<label for="descField" class="col-xs-2">Password</label>
+			<label for="descField" class="col-xs-2">Confirm Password:</label>
 			<div class="col-xs-10">
-			<input type="password" class="form-control" id="phoneField" placeholder="Your Phone Number" />
+			<input type="password" class="form-control" id="phoneField"/>
 			</div>
 		  </div>
 		  
-
-
 		  
 		  <div class="col-xs-10 col-xs-offset-2 row justify-content-center">
 			<button type="submit" name="submit" class="btn btn-primary">Submit</button>
@@ -228,7 +217,8 @@ if ($_SESSION["loggedStat"] == false) {
 		</form>
 
 		<?php 
-			require_once("classes.php");
+		 
+		 require_once("classes.php");
 
          if(isset($_POST['submit'])) {
            $username = $_POST['username'];
