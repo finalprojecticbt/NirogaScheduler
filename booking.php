@@ -206,7 +206,7 @@ if ($_SESSION["loggedStat"] == false) {
 	</form>
 
 
-	
+	<h5>Show Available Vaccines in each Center after check</h5>
 
 <p><label for="date">Date:</label>
 	<input type="date" id="appDate" name="appDate" required>
@@ -218,6 +218,7 @@ if ($_SESSION["loggedStat"] == false) {
   <input type="time" id="appTime" name="appTime" required>
 </p>
 
+<h5>Then Book 1 Avialable Vaccine</h5>
 
 	<p><input type="submit" id = "mysubmit" name="mysubmit" class="d-flex justify-content-center" value ="Book"></p>
 
