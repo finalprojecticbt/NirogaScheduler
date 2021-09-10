@@ -132,10 +132,6 @@ if ($_SESSION["loggedStat"] == false) {
 				<li class="nav-item2 ">
 					<a class="nav-link" href="booking.php">Create Appointments</a>
 				</li>
-				
-				<li class="nav-item2 ">
-					<a class="nav-link" href="check.php">Check Vaccine Availability</a>
-				</li>
 
 				<li class="nav-item2 ">
 					<a class="nav-link" href="view.php">View Appointments</a>
