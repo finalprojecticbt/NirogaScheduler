@@ -1,3 +1,34 @@
+<?php
+// Start the session
+session_start();
+
+/*
+
+if ($_SESSION["loggedStat"] == false) {
+  header('location: login.php');
+  die;
+}
+*/
+
+
+// Database Connect
+    require_once("db-connect.php");
+    $database = new DatabaseConn("localhost", "root", "", "nirogaDB");
+
+
+// Patient Class
+	class Patient {
+	public $pUsername, $email, $nic, $contactNo, $dob, $gender, $password,;
+	
+
+
+}
+
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -102,12 +133,29 @@
 		
    <!-- End-Navigation Bar -->
 
-   <h2 class="text-center">Register Now</h2>
+   <nav class="navbar navbar-expand-md bg-primary">
+	<div class="container">
+		   <!-- Nav Bar Items -->
+		<ul class="navbar-nav ml-auto">
 
-  <div class="container w-75 d-flex justify-content-center mt-5 mb-5">
-	<div class="row">
+			<li class="nav-item2 ">
+				<a class="nav-link" href="login.php">Login</a>
+			</li>
+			
+
+		</ul>
+	  </div>
+	</div>
+  </nav>
+
+
+
+   <h2 class="text-center mt-3"><u>Register Now</u></h2>
+
+  <div class="container w-50 d-flex justify-content-center mt-5 mb-5 border border-primary rounded">
+	<div class="row mx-4 my-4">
 	  <div class="col-xs-6">
-		<form class="form-horizontal">
+		<form class="form-horizontal" id="form" name="myForm" action = "" method="post"  onsubmit="return registerValidate()">
 		  <div class="form-group">
 			<label for="nameField" class="col-xs-2">Username</label>
 			<div class="col-xs-10">

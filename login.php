@@ -106,6 +106,7 @@
 		
    <!-- End-Navigation Bar -->
 
+   
    <nav class="navbar navbar-expand-md bg-primary">
 	<div class="container">
 		   <!-- Nav Bar Items -->
@@ -125,7 +126,7 @@
 
 
 
-<h2 class="text-center"><u>Login</u></h2>
+<h2 class="text-center mt-3"><u>Login</u></h2>
   <div class="container w-50 d-flex justify-content-center mt-5 mb-5 border border-primary rounded">
 	<div class="row mx-4 my-4">
 	  <div class="col-xs-6">

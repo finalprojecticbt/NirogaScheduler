@@ -1,0 +1,23 @@
+
+database php file: db-connect.php
+
+classes php file: classes.php
+
+user booking: booking.php
+
+
+CREATE DATABASE niroga;
+
+CREATE TABLE patient (
+    patientID int NOT NULL AUTO_INCREMENT,
+    pUsername varchar(255) NOT NULL,
+    email varchar(255),
+    nic varchar(255),
+    contactNo varchar(255),
+    dob DATE,
+    gender varchar(255),
+    password varchar(255) NOT NULL,
+    PRIMARY KEY (patientID)
+); 
+
+
