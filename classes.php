@@ -60,9 +60,7 @@ class DatabaseConn {
 		}  
 	   }
 
-	   $row = mysqli_fetch_array($result);
 
-	   $count = $row['cntUser'];
 	 
 }
 
