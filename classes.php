@@ -4,10 +4,10 @@
 class Patient {
 	public $pUsername, $email, $nic, $contactNo, $dob, $gender, $password;
 	
-	public function patientReg($username, $emailid, $password){  
+	public function patientReg($pUsername, $email, $nic, $contactNo, $dob, $gender, $password){  
 	  //	$password = md5($password);  
-		$qr = mysql_query("INSERT INTO patient(username, emailid, password) values('".$username."','".$emailid."','".$password."')") or die(mysql_error());  
-		return $qr;  
+		$qr = mysql_query("INSERT INTO patient(username, email, nic, contactNo, dob, gender, password ) values('".$pUsername."','".$email."','".$nic."','".$contactNo."','".$dob."','".$gender."','".$password."')") or die(mysql_error());  
+		return $qr;   
 	   
 }   
 
