@@ -28,8 +28,7 @@ class DatabaseConn {
 	public $pass;
 
 
-	  public function patientReg($username,$email,$nic,$phone, $dob, $sex, $pass)  
-	  {  
+	  public function patientReg($username,$email,$nic,$phone, $dob, $sex, $pass)  {  
 	  $string = "INSERT INTO patient(pUsername,email,nic,contactNo,dob,gender,password) 
 	  values('$username','$email','$nic','$phone','$dob','$sex','$pass' )";       
 	 
@@ -42,7 +41,29 @@ class DatabaseConn {
 		   echo mysqli_error($this->con); 
 		  // echo 'Error';
 	  }  
-	 }  
+	 } 
+	 
+	 public function patientLog($username,$pass)  {  
+		$string = "select count(*) as cntUser from patient 
+		where pUsername='".$username."' and password='".$pass."'";
+		$row = mysqli_fetch_array($result);
+		$count = $row['cntUser'];
+
+		if(mysqli_query($this->con, $string))  
+		{  
+			 echo "User Found";
+		}  
+		else  
+		{  
+			 echo mysqli_error($this->con); 
+			// echo 'Error';
+		}  
+	   }
+
+	   $row = mysqli_fetch_array($result);
+
+	   $count = $row['cntUser'];
+	 
 }
 
 
