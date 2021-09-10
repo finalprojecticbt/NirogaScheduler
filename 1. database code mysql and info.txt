@@ -20,4 +20,36 @@ CREATE TABLE patient (
     PRIMARY KEY (patientID)
 ); 
 
+CREATE TABLE center (
+    cenID int NOT NULL AUTO_INCREMENT,
+    cenName varchar(255),
+    cendistrict varchar(255),
+    cenAddress varchar(255),
+    PRIMARY KEY (cenID)
+); 
+
+
+CREATE TABLE vaccine (
+    vacID int NOT NULL AUTO_INCREMENT,
+    vacName varchar(255) NOT NULL,
+    vacStock int NOT NULL,
+    cenID int,
+    FOREIGN KEY (cenID) REFERENCES center(cenID),
+    PRIMARY KEY (vacID)
+);  
+
+CREATE TABLE appointment (
+    appID int NOT NULL AUTO_INCREMENT,
+    appDate varchar(255),
+    appTime varchar(255),
+    authCode varchar(255),
+    completeStat varchar(255),
+    patientID int,
+    vacID int,
+    cenID int,
+    FOREIGN KEY (patientID) REFERENCES patient(patientID),
+    FOREIGN KEY (vacID) REFERENCES vaccine(vacID),
+    FOREIGN KEY (cenID) REFERENCES center(cenID),
+    PRIMARY KEY (appID)
+);
 
