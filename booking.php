@@ -138,10 +138,6 @@ if ($_SESSION["loggedStat"] == false) {
 				</li>
 				
 				<li class="nav-item2 ">
-					<a class="nav-link" href="check.php">Check Vaccine Availability</a>
-				</li>
-
-				<li class="nav-item2 ">
 					<a class="nav-link" href="view.php">View Appointments</a>
 				</li>
 				
@@ -174,29 +170,6 @@ if ($_SESSION["loggedStat"] == false) {
 
  <form action="<?php echo $_SERVER['PHP_SELF']; ?>" class="login-container2" method="post" id = "mysubmitforum">
  
- <p>
- <label for="vaccine">Vaccine:</label>
-	 <select id="vaccine" name="vaccine">
-    <option value='Covishield-COVID-19-Dose-1' selected value >Covishield COVID-19: Dose 1</option>
-    <option value='Covishield-COVID-19-Dose-1'>Covishield COVID-19: Dose 2</option>
-    <option value='Pfizer-BioNTech-COVID-19-Dose-1'>Pfizer-BioNTech COVID-19: Dose 1</option>
-	<option value='Pfizer-BioNTech-COVID-19-Dose-2'>Pfizer-BioNTech COVID-19: Dose 2</option>
-	<option value='Covishield-COVID-19-Dose-1'>Synopharm COVID-19: Dose 1</option>
-	<option value='Covishield-COVID-19-Dose-1'>Synopharm COVID-19: Dose 2</option>
-
-</select>
-</p>
-
-
-<p><label for="date">Date:</label>
-	<input type="date" id="appDate" name="appDate" required>
-</p>
-
- 
-<p>
-  <label for="time">Time:</label>
-  <input type="time" id="appTime" name="appTime" required>
-</p>
 
 
  <label for="groups">District:</label>
@@ -228,8 +201,26 @@ if ($_SESSION["loggedStat"] == false) {
 
 	</select>
 
-	<p><input type="submit" id = "mysubmit" name="mysubmit" class="d-flex justify-content-center" value ="Book"></p>
+
+	<p><input type="submit" id = "mysubmit" name="mysubmit" class="d-flex justify-content-center" value ="Check"></p>
 	</form>
+
+
+	
+
+<p><label for="date">Date:</label>
+	<input type="date" id="appDate" name="appDate" required>
+</p>
+
+ 
+<p>
+  <label for="time">Time:</label>
+  <input type="time" id="appTime" name="appTime" required>
+</p>
+
+
+	<p><input type="submit" id = "mysubmit" name="mysubmit" class="d-flex justify-content-center" value ="Book"></p>
+
 
 	</div>
  </div>
