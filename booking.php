@@ -11,54 +11,9 @@ if ($_SESSION["loggedStat"] == false) {
 
 }
 */
-class Database {
-	private $host, $database, $username, $password, $connection;
-	private $port = 3306;
-	
-
-	function __construct($host, $username, $password, $database, $port = 3306, $autoconnect = true) {
-	  $this->host = $host;
-	  $this->database = $database;
-	  $this->username = $username;
-	  $this->password = $password;
-	  $this->port = $port;
-	  if($autoconnect) $this->open();
-	}
-	/*
-	 Open the connection to your database.
-	*/
-	function open() {
-	  $this->connection = new mysqli($this->host, $this->username, $this->password, $this->database, $this->port);
-	}
-	/*
-	Close the connection 
-	*/
-	function close() {
-	  $this->connection->close();
-	}
-	/*
-	
-	 Execute your query
-	
-	@param string $query - your sql query
-	@return the result of the executed query 
-
-	*/
-	function query($query) {
-	  return $this->connection->query($query);
-	}
-	/*
-	 Escape your parameters to prevent SQL Injections!
-	
-	@param string $string - your parameter to escape
-	@return the escaped string 
-	*/
-	function escape($string) {
-	  return $this->connection->escape_string($string);
-	}
-  }
-
-  $database = new Database("localhost", "root", "", "nirogaDB");
+   // Database Connect
+   require_once("db-connect.php");
+   $database = new DatabaseConn("localhost", "root", "", "nirogaDB");
 
 ?>
 
