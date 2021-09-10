@@ -1,7 +1,5 @@
 
-database php file: db-connect.php
-
-classes php file: classes.php
+database and classes php file: classes.php
 
 user booking: booking.php
 

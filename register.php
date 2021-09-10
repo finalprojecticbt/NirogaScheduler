@@ -11,18 +11,9 @@ if ($_SESSION["loggedStat"] == false) {
 */
 
 
-// Database Connect
-    require_once("db-connect.php");
-    $database = new DatabaseConn("localhost", "root", "", "nirogaDB");
 
-
-// Patient Class
-	class Patient {
-	public $pUsername, $email, $nic, $contactNo, $dob, $gender, $password,;
 	
 
-
-}
 
 ?>
 
@@ -159,21 +150,35 @@ if ($_SESSION["loggedStat"] == false) {
 		  <div class="form-group">
 			<label for="nameField" class="col-xs-2">Username</label>
 			<div class="col-xs-10">
-			  <input type="text" class="form-control" id="nameField" placeholder="Your Name" />
+			  <input type="text" class="form-control" id="username" name="username" placeholder="Your Name" />
 			</div>
 		  </div>
 		
 		  <div class="form-group">
 			<label for="emailField" class="col-xs-2">Email</label>
 			<div class="col-xs-10">
-			  <input type="email" class="form-control" id="emailField" placeholder="Your Email" />
+			  <input type="text" class="form-control" id="email"  name="email" placeholder="Your Email" />
 			</div>
 		  </div>
 		
 		  <div class="form-group">
+			<label for="phoneField" class="col-xs-2">NIC:</label>
+			<div class="col-xs-10">
+			  <input type="text" class="form-control" id="nic" name="nic" placeholder="Your Phone Number" />
+			</div>
+		  </div>
+
+		  <div class="form-group">
+			<label for="phoneField" class="col-xs-2">Phone:</label>
+			<div class="col-xs-10">
+			  <input type="text" class="form-control" id="phone" name="phone"placeholder="Your Phone Number" />
+			</div>
+		  </div>
+
+		  <div class="form-group">
 			<label for="phoneField" class="col-xs-2">Date of Birth</label>
 			<div class="col-xs-10">
-			  <input type="text" class="form-control" id="phoneField" placeholder="Your Phone Number" />
+			  <input type="text" class="form-control" id="dob" name="dob" placeholder="Your Phone Number" />
 			</div>
 		  </div>
 		
@@ -198,7 +203,7 @@ if ($_SESSION["loggedStat"] == false) {
 		  <div class="form-group">
 			<label for="descField" class="col-xs-2">Password</label>
 			<div class="col-xs-10">
-			<input type="password" class="form-control" id="phoneField" placeholder="Your Phone Number" />
+			<input type="password" class="form-control" id="password" name="password" placeholder="Your Phone Number" />
 			</div>
 		  </div>
 
@@ -217,16 +222,37 @@ if ($_SESSION["loggedStat"] == false) {
 
 		  
 		  <div class="col-xs-10 col-xs-offset-2 row justify-content-center">
-			<button type="submit" class="btn btn-primary">Submit</button>
+			<button type="submit" name="submit" class="btn btn-primary">Submit</button>
 		  </div>
 		  
 		</form>
+
+		<?php 
+			require_once("classes.php");
+
+         if(isset($_POST['submit'])) {
+           $username = $_POST['username'];
+           $email=$_POST['email'];
+           $nic=$_POST['nic'];
+           $phone=$_POST['phone'];
+           $dob = $_POST['dob'];
+           $sex=$_POST['sex'];
+           $pass=$_POST['password'];
+		   
+		   echo "Success";
+
+           $obj = new Patient();
+           $obj->patientReg($username,$email,$nic,$phone,$dob,$sex,$pass);
+         }
+     ?>
+
+
+
+
+
 	  </div>
 	</div>
   </div>
-
-
-
 
 
 
