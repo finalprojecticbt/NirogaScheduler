@@ -32,9 +32,26 @@ class DatabaseConn {
 	  $string = "INSERT INTO patient(pUsername,email,nic,contactNo,dob,gender,password) 
 	  values('$username','$email','$nic','$phone','$dob','$sex','$pass' )";       
 	 
-	  if(mysqli_query($this->con, $string))  
+	  if(mysqli_query($this->con, $string))
 	  {  
-		   echo "Registration Success";
+		echo "<div class = 'msgSet' >";
+		echo "<span class='status-not-available'><h3>Registration Successfull. Please Log In.</h3></span>";
+		
+		echo "<div class='goBack'>   <button onclick=\"location.href='/login.php'\">log In</button>   </div>";
+  
+  
+		echo "<br>";
+		echo "<div class='status-not-available'><h5>Sign In Details</h5></div>";
+		  echo "<div>Username: $username</div>";
+		  echo "<div>Email: $email</div>";
+		  echo "<div>NIC: $nic</div>";
+		  echo "<div>Phone: $phone</div>";
+		  echo "<div>Use Your Password to Sign In.</div>";
+		  echo "</div>";
+
+		  
+
+		   
 	  }  
 	  else  
 	  {  

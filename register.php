@@ -216,7 +216,8 @@ if ($_SESSION["loggedStat"] == false) {
 		  </div>
 		  
 		</form>
-
+		<center>
+		<br>
 		<?php 
 		 
 		 require_once("classes.php");
@@ -229,7 +230,7 @@ if ($_SESSION["loggedStat"] == false) {
            $nic=$_POST['nic'];
            $phone=$_POST['phone'];
            $dob = $_POST['dob'];
-           $sex=$_POST['sex'];
+           $gender=$_POST['gender'];
            $pass=$_POST['password'];
 		   
 		   
@@ -237,15 +238,15 @@ if ($_SESSION["loggedStat"] == false) {
 		  
 
 		   $obj = new Patient();
-		   $obj->checkUserExist($username);
+		   $obj->patientReg($username, $email, $nic, $phone, $dob, $gender, $pass);
 		
 		  
 		   
 		//	$obj = new Patient();
-		//	$obj->patientReg($username,$email,$nic,$phone,$dob,$sex,$pass);
+		//	$obj->patientReg($username,$email,$nic,$phone,$dob,$gender,$pass);
 
 
-		  
+
 
 
          }
@@ -253,7 +254,7 @@ if ($_SESSION["loggedStat"] == false) {
 
 
 
-
+</center>
 
 	  </div>
 	</div>
