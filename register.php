@@ -2,17 +2,34 @@
 // Start the session
 session_start();
 
-/*
+require_once("classes.php");
 
-if ($_SESSION["loggedStat"] == false) {
-  header('location: login.php');
-  die;
+
+
+if(isset($_POST['submit'])) {
+    $username = $_POST['username'];
+    $email=$_POST['email'];
+    $nic=$_POST['nic'];
+    $phone=$_POST['phone'];
+    $dob = $_POST['dob'];
+    $gender=$_POST['gender'];
+    $pass=$_POST['password'];
+
+
+
+
+
+    $obj = new Patient();
+    $obj->patientReg($username, $email, $nic, $phone, $dob, $gender, $pass);
+
+
+
+
+
+
 }
-*/
 
 
-
-	
 
 
 ?>
@@ -218,39 +235,6 @@ if ($_SESSION["loggedStat"] == false) {
 		</form>
 		<center>
 		<br>
-		<?php 
-		 
-		 require_once("classes.php");
-
-
-
-         if(isset($_POST['submit'])) {
-           $username = $_POST['username'];
-           $email=$_POST['email'];
-           $nic=$_POST['nic'];
-           $phone=$_POST['phone'];
-           $dob = $_POST['dob'];
-           $gender=$_POST['gender'];
-           $pass=$_POST['password'];
-		   
-		   
-
-		  
-
-		   $obj = new Patient();
-		   $obj->patientReg($username, $email, $nic, $phone, $dob, $gender, $pass);
-		
-		  
-		   
-		//	$obj = new Patient();
-		//	$obj->patientReg($username,$email,$nic,$phone,$dob,$gender,$pass);
-
-
-
-
-
-         }
-     ?>
 
 
 

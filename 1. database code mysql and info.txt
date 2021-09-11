@@ -23,7 +23,6 @@ CREATE TABLE patient (
 
 
 
-
 CREATE TABLE center (
     cenID int NOT NULL AUTO_INCREMENT,
     cenName varchar(50),

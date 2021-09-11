@@ -2,15 +2,17 @@
 // Start the session
 session_start();
 
-/*
 
-if ($_SESSION["loggedStat"] == false) {
-  header('location: login.php');
+if (!$_SESSION["isLogged"]) {
+
+    echo '<script>alert("Logged err")</script>';
+
+    header('location: login.php');
   die;
 
 
 }
-*/
+
    // Database Connect
    require_once("classes.php");
    $database = new DatabaseConn("localhost", "root", "", "nirogaDB");

@@ -2,6 +2,14 @@
 // Start the session
 session_start();
 
+require_once("classes.php");
+
+if(isset($_POST['submit'])) {
+    $username = $_POST['username'];
+    $pass=$_POST['password'];
+    $patient = new Patient();
+    $patient-> check_login($username,$pass);
+}
 
 
 ?>
@@ -154,37 +162,22 @@ session_start();
 		  <div class="form-group">
 			<label for="password" class="col-xs-2">Password:</label>
 			<div class="col-xs-10">
-			<input type="password" class="form-control" id="password" name="username"  placeholder="Password" />
+			<input type="password" class="form-control" id="password" name="password"  placeholder="Password" />
 			</div>
 			<div id="passErr"></div >
 		  </div>
 		  
 		  <div class="col-xs-10 col-xs-offset-2 row justify-content-center">
-			<button type="submit" class="btn btn-primary">Submit</button>
+			<button type="submit" name="submit" class="btn btn-primary">Submit</button>
 		  </div>
-		  
+
 		</form>
-		<?php 
-		 
-		 require_once("classes.php");
-
-         if(isset($_POST['submit'])) {
-           $username = $_POST['username'];
-           $pass=$_POST['password'];
-
-		   
-		   $obj = new Patient();
-		   $obj->check_login($username,$pass);
-		
-		  
-
-		 }
 
 
-	?>
 
 
-		
+
+
 	  </div>
 	</div>
   </div>
