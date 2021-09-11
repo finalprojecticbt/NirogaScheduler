@@ -7,6 +7,8 @@ function registerValidate() {
     let email = document.forms["myForm"]["email"].value;
     let nic = document.forms["myForm"]["nic"].value;
     let phone = document.forms["myForm"]["phone"].value;
+    let niclength = nic.length;
+    let phonelength = phone.length;
     let dob = document.forms["myForm"]["dob"].value;
     let gender = document.forms["myForm"]["gender"].value;
     let pass = document.forms["myForm"]["password"].value;
@@ -35,9 +37,16 @@ function registerValidate() {
         document.getElementById("userErr").innerHTML = "NIC Cannot be Blank.";
         return false;
       }
+
+      if (niclength < 6) {
+        document.getElementById("userErr").innerHTML = "NIC Should be more than 5 Characters";
+        return false;
+      }
+
       if(phone == "") {
         document.getElementById("userErr").innerHTML = "Contact Number Cannot be Blank.";
         return false;
+        
       }
       if(dob == "") {
         document.getElementById("userErr").innerHTML = "Date of Birth Cannot be Blank.";
