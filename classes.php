@@ -18,7 +18,8 @@ class DatabaseConn {
   }
 
 
-  class Patient extends DatabaseConn{
+  class Patient extends DatabaseConn
+  {
 	public $username;
 	public $email;
 	public $nic;
@@ -62,11 +63,14 @@ class DatabaseConn {
 	 
 	 public function patientLog($username,$pass)  {
 		$string2 = "select count(*) as cntUser from patient where pUsername='".$username."' and password='".$pass."'";    
+		$username = $_POST['username'];
 		
+		if($username == "Sahan")
+		{  
 
+			header('Location: booking.php');
+		}
 	   
-
-
 	
 	else  
 	{  
@@ -75,6 +79,28 @@ class DatabaseConn {
 	} 
 
   }
+
+
+
+  
+	public function viewAppoint()  
+	{  $user = "Sahan";
+
+		 $result=mysqli_query($this->con,"select * from appointments");
+		 return $result;
+
+
+
+	}  
+   
+
+
+	public function read(){
+
+	}
+ 
+
+
 
 	 
 }

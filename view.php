@@ -7,9 +7,9 @@ session_start();
 if ($_SESSION["loggedStat"] == false) {
   header('location: login.php');
   die;
-
-*/
 }
+*/
+
 
 ?>
 
@@ -163,10 +163,20 @@ if ($_SESSION["loggedStat"] == false) {
 
  <div class="container d-flex justify-content-center mt-5 mb-3 ">
 	 
- 
+
+
+
+
+
  </div>
 
+ <?php
 
+require_once("classes.php");
+$obj = new Patient();
+$obj->viewAppoint();
+
+?>
 
 
 <script>

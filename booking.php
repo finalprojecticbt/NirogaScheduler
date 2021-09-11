@@ -12,7 +12,7 @@ if ($_SESSION["loggedStat"] == false) {
 }
 */
    // Database Connect
-   require_once("db-connect.php");
+   require_once("classes.php");
    $database = new DatabaseConn("localhost", "root", "", "nirogaDB");
 
 ?>
