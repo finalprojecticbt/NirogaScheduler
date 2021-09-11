@@ -220,6 +220,8 @@ if ($_SESSION["loggedStat"] == false) {
 		 
 		 require_once("classes.php");
 
+
+
          if(isset($_POST['submit'])) {
            $username = $_POST['username'];
            $email=$_POST['email'];
@@ -229,10 +231,23 @@ if ($_SESSION["loggedStat"] == false) {
            $sex=$_POST['sex'];
            $pass=$_POST['password'];
 		   
-		   echo "Success";
+		   
 
-           $obj = new Patient();
-           $obj->patientReg($username,$email,$nic,$phone,$dob,$sex,$pass);
+		   $string = "SELECT pUsername FROM patient WHERE pUsername='" . $_POST["username"] . "'";       
+		  
+
+		   $obj = new Patient();
+		   $obj->checkUserExist($username);
+		
+		  
+		   
+		//	$obj = new Patient();
+		//	$obj->patientReg($username,$email,$nic,$phone,$dob,$sex,$pass);
+
+
+		  
+
+
          }
      ?>
 

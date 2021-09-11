@@ -1,3 +1,14 @@
+<?php
+// Start the session
+session_start();
+
+
+
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -153,6 +164,27 @@
 		  </div>
 		  
 		</form>
+		<?php 
+		 
+		 require_once("classes.php");
+
+         if(isset($_POST['submit'])) {
+           $username = $_POST['username'];
+           $pass=$_POST['password'];
+
+		   
+		   $obj = new Patient();
+		   $obj->patientLog($username,$pass);
+		
+		  
+
+		 }
+
+
+	?>
+
+
+		
 	  </div>
 	</div>
   </div>

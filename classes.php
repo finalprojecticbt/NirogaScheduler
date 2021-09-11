@@ -4,7 +4,7 @@ class DatabaseConn {
 	private $host='localhost';
 	private $username='root';
 	private $password='';
-	private $dbName='niroga001';
+	private $dbName='bbbb';
 
 	public function __construct()  
 	{  
@@ -41,25 +41,38 @@ class DatabaseConn {
 		   echo mysqli_error($this->con); 
 		  // echo 'Error';
 	  }  
-	 } 
+	 }
 	 
-	 public function patientLog($username,$pass)  {  
-		$string = "select count(*) as cntUser from patient 
-		where pUsername='".$username."' and password='".$pass."'";
-		$row = mysqli_fetch_array($result);
-		$count = $row['cntUser'];
+	 public function patientLog($username,$pass)  {
+		$string3 = "select count(*) as cntUser from patient where pUsername='".$username."' and password='".$pass."'";    
+		if(mysqli_query($this->con, $string3))  
+		{  
+			 echo "Login Success";
+			 header('Location: booking.php');
+		}  
 
-		if(mysqli_query($this->con, $string))  
-		{  
-			 echo "User Found";
-		}  
-		else  
-		{  
-			 echo mysqli_error($this->con); 
-			// echo 'Error';
-		}  
 	   }
 
+
+	   public function checkUserExist($username){
+       
+		$string2 = "SELECT pUsername FROM patient WHERE pUsername='" . $_POST["username"] . "'";       
+      
+   
+		if(mysqli_query($this->con, $string2))  {  
+		 
+			echo "Registration Success";
+		
+	}  
+	
+	
+	else  
+	{  
+		 echo mysqli_error($this->con); 
+		// echo 'Error';
+	} 
+
+  }
 
 	 
 }
