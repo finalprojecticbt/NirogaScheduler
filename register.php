@@ -186,11 +186,11 @@ if ($_SESSION["loggedStat"] == false) {
 		  <div class="form-group">
 			<label for="phoneField" class="col-xs-2">Gender:</label>
 			<div class="col-xs-10">
-				<select name="sex" id="sex" >
+				<select name="gender" id="gender" >
 					<option disabled selected value>Select Gender</option>
 					<option value="Male">Male</option>
 					<option value="Female">Female</option>
-					<option value="Other">Other</option>		  
+					<option value="Other">Other</option>
 					</select>
 			</div>
 		  </div>
@@ -205,10 +205,11 @@ if ($_SESSION["loggedStat"] == false) {
 		  <div class="form-group">
 			<label for="descField" class="col-xs-2">Confirm Password:</label>
 			<div class="col-xs-10">
-			<input type="password" class="form-control" id="phoneField"/>
+			<input type="password" class="form-control" id="conPass" name="conPass"/>
 			</div>
 		  </div>
-		  
+
+		  <div id="userErr"></div >
 		  
 		  <div class="col-xs-10 col-xs-offset-2 row justify-content-center">
 			<button type="submit" name="submit" class="btn btn-primary">Submit</button>
@@ -233,7 +234,6 @@ if ($_SESSION["loggedStat"] == false) {
 		   
 		   
 
-		   $string = "SELECT pUsername FROM patient WHERE pUsername='" . $_POST["username"] . "'";       
 		  
 
 		   $obj = new Patient();
@@ -355,6 +355,8 @@ if ($_SESSION["loggedStat"] == false) {
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script src="js/numcount.js"></script>
+	<script src="/js/registerValidate.js"></script>
+
 
 
 </body>

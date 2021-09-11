@@ -45,11 +45,9 @@ class DatabaseConn {
 	 
 	 public function patientLog($username,$pass)  {
 		$string3 = "select count(*) as cntUser from patient where pUsername='".$username."' and password='".$pass."'";    
-		if(mysqli_query($this->con, $string3))  
-		{  
-			 echo "Login Success";
-			 header('Location: booking.php');
-		}  
+		
+		
+
 
 	   }
 
