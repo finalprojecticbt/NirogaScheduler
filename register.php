@@ -176,7 +176,7 @@ if ($_SESSION["loggedStat"] == false) {
 		  </div>
 
 		  <div class="form-group">
-			<label for="phoneField" class="col-xs-2">Date of Birth</label>
+			<label for="phoneField" class="col-xs-2">Date of Birth:</label>
 			<div class="col-xs-10">
 			<input type="text" placeholder="YYYY-MM-DD" id="dob" name="dob"/>
 			</div>

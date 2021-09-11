@@ -61,25 +61,12 @@ class DatabaseConn {
 	 }
 	 
 	 public function patientLog($username,$pass)  {
-		$string3 = "select count(*) as cntUser from patient where pUsername='".$username."' and password='".$pass."'";    
+		$string2 = "select count(*) as cntUser from patient where pUsername='".$username."' and password='".$pass."'";    
 		
-		
+
+	   
 
 
-	   }
-
-
-	   public function checkUserExist($username){
-       
-		$string2 = "SELECT pUsername FROM patient WHERE pUsername='" . $_POST["username"] . "'";       
-      
-   
-		if(mysqli_query($this->con, $string2))  {  
-		 
-			echo "Registration Success";
-		
-	}  
-	
 	
 	else  
 	{  
