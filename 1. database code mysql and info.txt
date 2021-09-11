@@ -6,48 +6,56 @@ user booking: booking.php
 
 CREATE DATABASE niroga;
 
+
 CREATE TABLE patient (
     patientID int NOT NULL AUTO_INCREMENT,
-    pUsername varchar(255) NOT NULL,
+    pUsername varchar(50) NOT NULL,
     email varchar(255),
     nic varchar(255),
     contactNo varchar(255),
     dob DATE,
     gender varchar(255),
     password varchar(255) NOT NULL,
-    PRIMARY KEY (patientID)
-); 
+    PRIMARY KEY (patientID),
+    UNIQUE (pUsername)
+);
+
+
+
 
 CREATE TABLE center (
     cenID int NOT NULL AUTO_INCREMENT,
-    cenName varchar(255),
+    cenName varchar(50),
     cendistrict varchar(255),
     cenAddress varchar(255),
-    PRIMARY KEY (cenID)
+    PRIMARY KEY (cenID),
+    UNIQUE (cenName)
 ); 
 
 
 CREATE TABLE vaccine (
     vacID int NOT NULL AUTO_INCREMENT,
-    vacName varchar(255) NOT NULL,
+    vacName varchar(70) NOT NULL,
     vacStock int NOT NULL,
-    cenID int,
-    FOREIGN KEY (cenID) REFERENCES center(cenID),
-    PRIMARY KEY (vacID)
+    cenName varchar(50),
+    FOREIGN KEY (cenName) REFERENCES center(cenName),
+    PRIMARY KEY (vacID),
+    UNIQUE (vacName)
 );  
+
 
 CREATE TABLE appointment (
     appID int NOT NULL AUTO_INCREMENT,
     appDate varchar(255),
     appTime varchar(255),
-    authCode varchar(255),
+    authCode int,
     completeStat varchar(255),
-    patientID int,
-    vacID int,
-    cenID int,
-    FOREIGN KEY (patientID) REFERENCES patient(patientID),
-    FOREIGN KEY (vacID) REFERENCES vaccine(vacID),
-    FOREIGN KEY (cenID) REFERENCES center(cenID),
+    pUsername varchar(50),
+    vacName varchar(70),
+    cenName varchar(50),
+    FOREIGN KEY (pUsername) REFERENCES patient(pUsername),
+    FOREIGN KEY (vacName) REFERENCES vaccine(vacName),
+    FOREIGN KEY (cenName) REFERENCES center(cenName),
     PRIMARY KEY (appID)
 );
 
