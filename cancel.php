@@ -7,9 +7,9 @@ session_start();
 if ($_SESSION["loggedStat"] == false) {
   header('location: login.php');
   die;
-
-*/
 }
+*/
+
 
 ?>
 
@@ -169,42 +169,30 @@ if ($_SESSION["loggedStat"] == false) {
 
  <p>
   <label for="time">Appintment ID:</label>
-  <input type="text" id="appTime" name="appTime" required>
+  <input type="text" id="appID" name="appID" required>
 </p>
 
-	<p><input type="submit" id = "mysubmit" name="mysubmit" class="d-flex justify-content-center" value ="Cancel"></p>
+	<p><input type="submit" id = "mysubmit" name="submit" class="d-flex justify-content-center" value ="Cancel"></p>
 	</form>
-
 	</div>
  </div>
+ 
+ <?php
+		 require_once("classes.php");
+
+ if(isset($_POST['submit'])) {
+           $appID = $_POST['appID'];
+     
+		  
+
+		   $obj = new Patient();
+		   $obj->cancelApp($appID);
+
+ }
+?>
 
 
 
-
-<script>
-
-$(function(){
-    $('#groups').on('change', function(){
-        var val = $(this).val();
-        var sub = $('#sub_groups');
-        $('option', sub).filter(function(){
-            if (
-                 $(this).attr('data-group') === val 
-              || $(this).attr('data-group') === 'SHOW'
-            ) {
-              if ($(this).parent('span').length) {
-                $(this).unwrap();
-              }
-            } else {
-              if (!$(this).parent('span').length) {
-                $(this).wrap( "<span>" ).parent().hide();
-              }
-            }
-        });
-    });
-    $('#groups').trigger('change');
-});
-</script>
 
 
 

@@ -164,7 +164,23 @@ if ($_SESSION["loggedStat"] == false) {
  <div class="container d-flex justify-content-center mt-5 mb-3 ">
 	 
 
+ <?php
+$user ="Sahan"
+// Select Record for Specific Username
+$sql = "SELECT * FROM appointment WHERE pUsername = '$user'";
+$result = mysqli_query($con, $sql);
+// Print Table
+echo "<table border='1'>";
+echo "  <tr>    <th>Booking ID</th>    <th>Username</th>    <th>Date</th>  <th>Time</th> <th>Program</th></tr>";
+while ($row = mysqli_fetch_assoc($result)) { 
+    foreach ($row as $field => $value) { 
+        echo "<td>" . $value . "</td>";
+    }
+    echo "</tr>";
+}
+echo "</table>";
 
+?>
 
 
 

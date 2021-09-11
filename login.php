@@ -142,11 +142,11 @@ session_start();
 	<div class="row mx-4 my-4">
 	  <div class="col-xs-6">
 
-		<form class="form-horizontal" id="form" name="myForm" action = "" method="post"  onsubmit="return loginValidate()">
+		<form class="form-horizontal" id="form" name="myForm" action = "" method="post"  >
 		  <div class="form-group">
 			<label for="username" class="col-xs-2">Username:</label>
 			<div class="col-xs-10">
-			  <input type="text" class="form-control" id="username" placeholder="Username" />
+			  <input type="text" class="form-control" id="username" name="username" placeholder="Username" />
 			</div>
 			<div id="userErr"></div >
 		  </div>
@@ -154,7 +154,7 @@ session_start();
 		  <div class="form-group">
 			<label for="password" class="col-xs-2">Password:</label>
 			<div class="col-xs-10">
-			<input type="password" class="form-control" id="password" placeholder="Password" />
+			<input type="password" class="form-control" id="password" name="username"  placeholder="Password" />
 			</div>
 			<div id="passErr"></div >
 		  </div>
@@ -174,7 +174,7 @@ session_start();
 
 		   
 		   $obj = new Patient();
-		   $obj->patientLog($username,$pass);
+		   $obj->check_login($username,$pass);
 		
 		  
 

@@ -61,24 +61,23 @@ class DatabaseConn {
 	  }  
 	 }
 	 
-	 public function patientLog($username,$pass)  {
-		$string2 = "select count(*) as cntUser from patient where pUsername='".$username."' and password='".$pass."'";    
-		$username = $_POST['username'];
-		
-		if($username == "Sahan")
-		{  
-
-			header('Location: booking.php');
-		}
-	   
 	
-	else  
-	{  
-		 echo mysqli_error($this->con); 
-		// echo 'Error';
-	} 
-
-  }
+	    public function check_login($username, $password){
+ 
+			$sql = "SELECT * FROM patient WHERE username = '$username' AND password = '$password'";
+			$query = $this->con->query($sql);
+	 
+			if($query->num_rows > 0){
+				$row = $query->fetch_array();
+				echo "Success";
+				header('Location: booking.php');
+				return $row['pUsername'];
+				
+			}
+			else{
+				return false;
+			}
+		}
 
 
 
@@ -95,8 +94,19 @@ class DatabaseConn {
    
 
 
-	public function read(){
-
+	
+		public function cancelApp($appID)  {
+			$string = "DELETE FROM appointment WHERE AppID = '$appID'" ;     
+			// AND Username = '$user'" ;     
+		   
+			if(mysqli_query($this->con, !$string))
+			{  
+			  echo "<div class = 'msgSet' >";
+			  echo "<span class='status-not-available'><h3>Delete Successfull. Please Refresh.</h3></span>";
+			  echo "<div class='goBack'>   <button onclick=\"location.href='/login.php'\">log In</button>   </div>";
+	
+				 
+			} 
 	}
  
 

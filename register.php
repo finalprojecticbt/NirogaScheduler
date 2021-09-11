@@ -146,7 +146,7 @@ if ($_SESSION["loggedStat"] == false) {
   <div class="container w-50 d-flex justify-content-center mt-5 mb-5 border border-primary rounded">
 	<div class="row mx-4 my-4">
 	  <div class="col-xs-6">
-		<form class="form-horizontal" id="form" name="myForm" action = "" method="post"  onsubmit="return registerValidate()">
+		<form class="form-horizontal" action="<?php echo $_SERVER['PHP_SELF']; ?>" id="form" name="myForm" method="post"  onsubmit="return registerValidate()">
 		  <div class="form-group">
 			<label for="nameField" class="col-xs-2">Username:</label>
 			<div class="col-xs-10">
